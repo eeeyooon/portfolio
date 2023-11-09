@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section className="bg-gray-300 text-blue-500 font-hambak">
+    <section className="bg-primary text-blue_color font-hambak">
       Portfolio
     </section>
   );
