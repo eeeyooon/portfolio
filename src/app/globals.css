@@ -42,3 +42,9 @@ body {
   height: 100vh;
   overflow-y: auto;
 }
+
+@layer base {
+  .font-outline-red {
+    -webkit-text-stroke: 2px #ef7373;
+  }
+}

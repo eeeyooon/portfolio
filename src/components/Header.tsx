@@ -4,14 +4,16 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center p-4">
       <Link href="/">
-        <h1 className="text-xl font-bold font-hambak">yoon.</h1>
+        <h1 className="text-3xl font-bold font-hambak border-b-[3px] border-b-blue_color pr-5 pb-1">
+          yoon.
+        </h1>
       </Link>
-      <nav className="flex gap-4 font-hambak text-gray-500">
-        <Link href="/">home</Link>
-        <Link href="/about">about</Link>
-        <Link href="/skills">skills</Link>
-        <Link href="/projects">projects</Link>
-        <Link href="/contact">contact</Link>
+      <nav className="flex text-xl gap-6 font-hambak text-gray-500">
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/skills">Skills</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
     </header>
   );

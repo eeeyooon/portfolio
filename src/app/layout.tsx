@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="font-scoreLight flex flex-col w-full max-w-screen-2xl mx-auto">
+      <body className="bg-primary font-scoreLight flex flex-col w-full max-w-screen-2xl mx-auto">
         <Header />
         <main className="grow">{children}</main>
         <Footer />
