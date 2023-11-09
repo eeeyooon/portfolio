@@ -36,3 +36,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html,
+body {
+  height: 100vh;
+  overflow-y: auto;
+}
