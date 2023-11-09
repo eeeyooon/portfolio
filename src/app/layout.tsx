@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./../components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="bg-primary font-scoreLight flex flex-col w-full max-w-screen-2xl mx-auto">
+      <body className="bg-primary font-scoreLight flex flex-col w-full max-w-screen-2xl mx-auto scrollbar-hide">
         <Header />
         <main className="grow">{children}</main>
         <Footer />
