@@ -3,7 +3,7 @@ import ProfileImage from "../../../public/images/profile.png";
 export default function AboutPage() {
   return (
     <>
-      <section className="mt-20 mx-20 mb-12">
+      <section className="mt-32 mx-20 mb-12">
         <h2 className="font-hambak text-red_color text-7xl mb-8">About Me</h2>
         <div className="flex flex-row-reverse h-full justify-center">
           <Image
