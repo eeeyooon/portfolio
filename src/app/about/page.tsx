@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ProfileImage from "../../../public/images/profile.png";
-import SlotMachine from "@/components/SlotMachine";
-import { sentence } from "../../../data/about/data";
+import SlotMachine from "@/components/About/SlotMachine";
+import { sentence } from "../../../data/about/aboutData";
 export default function AboutPage() {
   return (
     <>
