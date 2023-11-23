@@ -77,7 +77,7 @@ export default function SlotMachine({ sentence }: Props) {
         <LuShuffle />
       </motion.button>
       <span className="md:text-2xl text-lg font-thin text-gray-700 ml-2">
-        강지윤입니다.
+        입니다.
       </span>
     </div>
   );
