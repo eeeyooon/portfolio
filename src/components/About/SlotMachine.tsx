@@ -40,14 +40,17 @@ export default function SlotMachine({ sentence }: Props) {
   }
 
   return (
-    <div className="flex">
+    <div className="flex items-center md:w-[800px] w-[600px]">
+      <span className="md:text-2xl text-lg font-thin text-gray-700 mr-2">
+        저는
+      </span>
       <AnimatePresence mode="popLayout">
         {textList.map((text, i) => {
           const isLast = i === textList.length - 1 - count;
           return (
             i === curIndex && (
               <motion.p
-                className="overflow-hidden font-scoreLight md:text-3xl text-2xl font-thin text-gray-700 md:w-[400px] w-[300px]"
+                className="overflow-hidden font-scoreLight md:text-2xl text-lg font-thin text-gray-700 md:w-[300px] w-[225px]"
                 key={text}
                 custom={{ isLast }}
                 variants={variants}
@@ -66,13 +69,16 @@ export default function SlotMachine({ sentence }: Props) {
         })}
       </AnimatePresence>
       <motion.button
-        className="ml-3 md:text-2xl text-xl text-gray-600"
+        className="ml-1 md:text-base text-sm text-gray-600"
         onClick={handleClick}
         whileTap={{ scale: 0.9, scaleY: 1 }}
         whileHover={{ scaleY: -1 }}
       >
         <LuShuffle />
       </motion.button>
+      <span className="md:text-2xl text-lg font-thin text-gray-700 ml-2">
+        강지윤입니다.
+      </span>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function AboutPage() {
           About Me
         </h2>
         <div className="flex flex-col w-full md:w-2/3">
-          <h3 className="mb-5 text-xl md:text-3xl">
+          <h3 className="my-1 text-xl md:text-3xl">
             <SlotMachine sentence={sentence} />
           </h3>
           <AboutContent />
@@ -20,7 +20,8 @@ export default function AboutPage() {
           <Image
             src={ProfileImage}
             alt="Pictiure of the author"
-            fill
+            width={300}
+            height={200}
             priority
           />
         </div>
