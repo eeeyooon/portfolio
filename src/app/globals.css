@@ -41,10 +41,22 @@ html,
 body {
   height: 100vh;
   overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @layer base {
   .font-outline-red {
-    -webkit-text-stroke: 2px #ef7373;
+    -webkit-text-stroke: 3px #ef7373;
   }
 }

@@ -18,7 +18,7 @@ export default function SlotMachine({ sentence }: Props) {
       setCurIndex((prev) => {
         return prev < textList.length - 1 - count ? prev + 1 : prev;
       });
-    }, 10 * (curIndex + 1) * 0.5);
+    }, 10 * (curIndex + 1) * 0.7);
     return () => clearInterval(interval);
   }, [curIndex, count, textList.length]);
 
@@ -40,14 +40,14 @@ export default function SlotMachine({ sentence }: Props) {
   }
 
   return (
-    <div className="flex justify-between">
+    <div className="flex">
       <AnimatePresence mode="popLayout">
         {textList.map((text, i) => {
           const isLast = i === textList.length - 1 - count;
           return (
             i === curIndex && (
               <motion.p
-                className="overflow-hidden text-4xl font-thin text-gray-700"
+                className="overflow-hidden font-scoreLight md:text-3xl text-2xl font-thin text-gray-700 md:w-[400px] w-[300px]"
                 key={text}
                 custom={{ isLast }}
                 variants={variants}
@@ -66,7 +66,7 @@ export default function SlotMachine({ sentence }: Props) {
         })}
       </AnimatePresence>
       <motion.button
-        className="mr-[400px] text-3xl"
+        className="ml-3 md:text-2xl text-xl text-gray-600"
         onClick={handleClick}
         whileTap={{ scale: 0.9, scaleY: 1 }}
         whileHover={{ scaleY: -1 }}
