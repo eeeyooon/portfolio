@@ -1,5 +1,5 @@
 import { projects } from "../../../data/projectData/projectData";
-import FeaturedProjectBox from "./FeaturedProjectBox";
+import ProjectBox from "./ProjectBox";
 import Link from "next/link";
 
 export default function FeaturedProjectsPage() {
@@ -15,7 +15,7 @@ export default function FeaturedProjectsPage() {
       </Link>
       <ul>
         {featuredProject.map((project) => (
-          <FeaturedProjectBox key={project.path} project={project} />
+          <ProjectBox key={project.path} project={project} />
         ))}
       </ul>
     </section>

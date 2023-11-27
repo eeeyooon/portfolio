@@ -1,4 +1,4 @@
-import ProjectBox from "@/components/Projects/FeaturedProjectBox";
+import ProjectBox from "@/components/Projects/ProjectBox";
 import { projects } from "../../../../data/projectData/projectData";
 
 type Props = {
@@ -9,9 +9,6 @@ type Props = {
 
 export default function ProjectPage({ params: { slug } }: Props) {
   const slugProject = projects.filter((project) => project.path === slug);
-  console.log(slugProject);
-
-  const { title, intro } = slugProject[0];
 
   return (
     <>

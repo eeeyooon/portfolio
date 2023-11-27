@@ -1,5 +1,4 @@
 import { Projects } from "@/types/projects";
-import Link from "next/link";
 import Image from "next/image";
 import SampleImage from "../../../public/images/projectSample.png";
 
@@ -41,7 +40,13 @@ export default function ProjectBox({
           {category.map((keyword) => (
             <span
               key={keyword}
-              className="mr-2 text-sm md:text-sm bg-yellow_color px-1 rounded-lg"
+              className={`text-sm rounded-lg px-2 mr-1  ${
+                keyword === "team"
+                  ? "bg-red_color"
+                  : keyword === "personal"
+                  ? "bg-brown_color"
+                  : "bg-yellow_color"
+              }`}
             >
               {keyword}
             </span>
