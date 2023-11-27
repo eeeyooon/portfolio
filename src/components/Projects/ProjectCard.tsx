@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function ProjectCard({
-  project: { title, intro, startDate, endDate, category, path },
+  project: { title, intro, startDate, endDate, category, path, stacks },
 }: Props) {
   return (
     <Link href={`/projects/${path}`}>
@@ -20,25 +20,34 @@ export default function ProjectCard({
           width={300}
           height={200}
         />
-        <div className="flex flex-col items-center p-4">
-          <h3 className="text-lg font-bold">{title}</h3>
-          <time className=" text-gray-700 ">
+        <div className="flex flex-col items-start p-4">
+          <div className="flex flex-row justify-between w-full items-center mb-1">
+            <h3 className="text-lg font-bold">{title}</h3>
+            <div className="my-1 ">
+              {category.map((tag) => (
+                <span
+                  key={tag}
+                  className={`text-xs rounded-lg px-2 mr-1  ${
+                    tag === "team"
+                      ? "bg-red_color"
+                      : tag === "personal"
+                      ? "bg-brown_color"
+                      : "bg-yellow_color"
+                  }`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          <time className=" text-gray-600 font-sm md:font-base">
             {startDate.toString()} ~ {endDate.toString()}
           </time>
-          <p className="w-full truncate text-center">{intro}</p>
-          <div>
-            {category.map((tag) => (
-              <span
-                key={tag}
-                className={`text-sm rounded-lg px-2 mr-1  ${
-                  tag === "team"
-                    ? "bg-red_color"
-                    : tag === "personal"
-                    ? "bg-brown_color"
-                    : "bg-yellow_color"
-                }`}
-              >
-                {tag}
+          <p className="w-full truncate">{intro}</p>
+          <div className="font-semibold text-xs md:text-sm text-gray-700 my-1 bg-blue-100 ">
+            {stacks.map((stack) => (
+              <span key={stack} className="mx-1">
+                {stack}
               </span>
             ))}
           </div>

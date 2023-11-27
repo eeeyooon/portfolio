@@ -8,7 +8,7 @@ export type Projects = {
   category: string[];
   path: string;
   featured: boolean;
-  stacks: string;
+  stacks: string[];
   githubUrl: string;
   docsUrl: string;
   serviceUrl: string;

@@ -52,12 +52,16 @@ export default function ProjectBox({
               {keyword}
             </span>
           ))}
-          <p className="text-sm md:text-md text-gray-500">
+          <p className="text-sm md:text-md text-gray-500 my-1">
             {startDate.toString()} - {endDate.toString()}
           </p>
-          <span className="mr-2 text-sm font-semibold md:text-base text-blue_color">
-            {stacks}
-          </span>
+          <div className="text-xs font-semibold md:text-sm text-blue_color inline-block">
+            {stacks.map((stack) => (
+              <span key={stack} className="mr-2">
+                {stack}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="mx-6">
           <p className="text-base md:text-lg">{description}</p>
