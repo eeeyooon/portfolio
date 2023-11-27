@@ -30,13 +30,14 @@ export default function ProjectBox({
             width={500}
             height={500}
             priority
+            className="rounded-lg"
           />
         </a>
       </div>
       <div className="text-lg md:text-xl">
-        <div className="text-center mb-4">
+        <div className="text-center md:text-left mb-4 mx-6">
           <h3 className="text-xl md:text-2xl ">{title}</h3>
-          <p className="text-center text-md md:text-base">{intro}</p>
+          <span className="text-md md:text-base mr-2">{intro}</span>
           {category.map((keyword) => (
             <span
               key={keyword}

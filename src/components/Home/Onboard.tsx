@@ -6,7 +6,7 @@ export default function Onboard() {
   const text = useTypeword("eeeyooon.", 60);
 
   return (
-    <section className="bg-primary h-screen text-center flex flex-col justify-center items-center selection:bg-red_color">
+    <section className="bg-primary h-screen text-center flex flex-col justify-center items-center">
       <p className="font-shrik text-brown_color md:text-7xl text-5xl">{text}</p>
       <div className="text-xl md:text-2xl h-10 mt-4">
         <p>
