@@ -5,19 +5,26 @@ import Link from "next/link";
 export default function FeaturedProjectsPage() {
   const featuredProject = projects.filter((project) => project.featured);
   return (
-    <section>
-      <h3>Featured Projects</h3>
-      <p>프로젝트를 클릭하면 해당 프로젝트의 상세 페이지로 이동합니다.</p>
-      <Link href="/projects">
-        <button className="font-semibold text-red_color">
-          더 많은 프로젝트 보러 가기
-        </button>
-      </Link>
+    <section className="mt-10">
+      <h2 className="font-hambak text-brown_color text-3xl md:text-4xl mb-4">
+        Featured Projects
+      </h2>
+      <p className="text-sm md:text-base">
+        프로젝트의 이미지를 클릭하면 해당 프로젝트의 레파지토리로 이동합니다.
+        <br />
+        다른 프로젝트들은 아래 링크를 클릭하면 볼 수 있습니다.
+      </p>
+      <button className="font-semibold text-red_color text-sm md:text-base">
+        <Link href="/projects">➡ 더 많은 프로젝트 보러가기</Link>
+      </button>
       <ul>
         {featuredProject.map((project) => (
           <ProjectBox key={project.path} project={project} />
         ))}
       </ul>
+      <p className="text-center mb-28 text-lg md:text-2xl font-shrik text-blue_color">
+        <Link href="/projects"> ❤ Click to see more projects.</Link>
+      </p>
     </section>
   );
 }

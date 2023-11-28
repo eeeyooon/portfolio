@@ -2,7 +2,7 @@ import ProjectGrid from "@/components/Projects/ProjectGrid";
 import { projects } from "../../../data/projectData/projectData";
 export default async function ProjectsPage() {
   return (
-    <section className="h-full my-10">
+    <section className="h-full my-10 selection:bg-blue_color">
       <h2 className="text-center font-hambak text-blue_color text-5xl md:text-6xl  mb-8">
         Projects
       </h2>
