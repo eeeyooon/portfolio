@@ -6,7 +6,7 @@ import { sentence } from "../../../data/about/aboutData";
 export default function AboutPage() {
   return (
     <>
-      <section className="container relative flex flex-col-reverse items-center h-screen gap-10 md:flex-row">
+      <section className="container relative flex flex-col-reverse items-center h-screen gap-10 md:flex-row mt-10">
         <h2 className="absolute top-5 md:top-0 font-hambak text-red_color text-6xl mb-8">
           About Me
         </h2>
