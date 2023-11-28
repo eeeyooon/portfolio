@@ -1,5 +1,6 @@
 import { Projects } from "@/types/projects";
 import Image from "next/image";
+import StackIcons from "./StackIcons";
 
 type Props = {
   project: Projects;
@@ -35,7 +36,7 @@ export default function ProjectBox({
       </div>
       <div className="text-lg md:text-xl">
         <div className="text-center md:text-left mb-4 mx-6">
-          <h3 className="text-xl md:text-2xl ">{title}</h3>
+          <h3 className="text-xl md:text-2xl font-scoreRegular ">{title}</h3>
           <span className="text-md md:text-base mr-2">{intro}</span>
           {category.map((keyword) => (
             <span
@@ -54,11 +55,9 @@ export default function ProjectBox({
           <p className="text-sm md:text-md text-gray-500 my-1">
             {startDate.toString()} - {endDate.toString()}
           </p>
-          <div className="text-xs font-semibold md:text-sm text-blue_color inline-block">
+          <div className="flex flex-row items-center md:justify-start justify-center text-gray-700 my-2 ">
             {stacks.map((stack) => (
-              <span key={stack} className="mr-2">
-                {stack}
-              </span>
+              <StackIcons key={stack} stack={stack} />
             ))}
           </div>
         </div>

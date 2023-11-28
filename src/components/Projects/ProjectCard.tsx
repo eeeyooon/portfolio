@@ -1,6 +1,7 @@
 import { Projects } from "@/types/projects";
 import Link from "next/link";
 import Image from "next/image";
+import StackIcons from "./StackIcons";
 
 type Props = {
   project: Projects;
@@ -21,7 +22,7 @@ export default function ProjectCard({
         />
         <div className="flex flex-col items-start p-4">
           <div className="flex flex-row justify-between w-full items-center mb-1">
-            <h3 className="text-lg font-bold">{title}</h3>
+            <h3 className="text-base md:text-base font-bold">{title}</h3>
             <div className="my-1 ">
               {category.map((tag) => (
                 <span
@@ -39,15 +40,13 @@ export default function ProjectCard({
               ))}
             </div>
           </div>
-          <time className=" text-gray-600 font-sm md:font-base">
+          <p className=" text-gray-600 text-base md:text-sm mb-1">
             {startDate.toString()} ~ {endDate.toString()}
-          </time>
+          </p>
           <p className="w-full truncate">{intro}</p>
-          <div className="font-semibold text-xs md:text-sm text-gray-700 my-1 bg-blue-100 ">
+          <div className="flex flex-row items-center text-xs md:text-sm text-gray-700 my-2 ">
             {stacks.map((stack) => (
-              <span key={stack} className="mx-1">
-                {stack}
-              </span>
+              <StackIcons key={stack} stack={stack} />
             ))}
           </div>
         </div>
