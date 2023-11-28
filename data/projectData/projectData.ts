@@ -86,7 +86,7 @@ export const projects: Projects[] = [
     serviceUrl: "",
   },
   {
-    title: "감정 일기장",
+    title: "감정일기장",
     intro: "일상과 그 날의 감정을 기록하는 일기장",
     description:
       "하루의 일상과 그날 느낀 감정을 함께 기록하는 나만의 감정 일기장입니다. 기존 버전의 일기장에 카카오 소셜 로그인, 파이어베이스 DB 연동하여 개선시킨 것이 최신 버전(리빌딩)입니다.",

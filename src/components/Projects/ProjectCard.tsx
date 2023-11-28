@@ -1,5 +1,4 @@
 import { Projects } from "@/types/projects";
-import SampleImage from "../../../public/images/projectSample.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,8 +13,8 @@ export default function ProjectCard({
     <Link href={`/projects/${path}`}>
       <article className="rounded-md overflow-hidden shadow-md hover:shadow-xl">
         <Image
-          className="w-full"
-          src={SampleImage}
+          className="w-full h-[240px] object-contain"
+          src={`/images/projects/${path}.png`}
           alt={title}
           width={300}
           height={200}

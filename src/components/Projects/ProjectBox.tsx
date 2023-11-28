@@ -1,6 +1,5 @@
 import { Projects } from "@/types/projects";
 import Image from "next/image";
-import SampleImage from "../../../public/images/projectSample.png";
 
 type Props = {
   project: Projects;
@@ -25,7 +24,7 @@ export default function ProjectBox({
       <div className="relative overflow-hidden w-60 md:w-1/2 md:h-1/2">
         <a href={githubUrl} target="_blank" rel="noreferrer">
           <Image
-            src={SampleImage}
+            src={`/images/projects/${path}.png`}
             alt="project_thumbnail"
             width={500}
             height={500}
