@@ -6,7 +6,7 @@ export default function FeaturedProjectsPage() {
   const featuredProject = projects.filter((project) => project.featured);
   return (
     <section className="mt-10">
-      <h2 className="font-hambak text-brown_color text-3xl md:text-4xl mb-4">
+      <h2 className="font-dohyeon tracking-tight text-brown_color text-xl md:text-2xl mb-4">
         Featured Projects
       </h2>
       <p className="text-sm md:text-base">
@@ -14,8 +14,8 @@ export default function FeaturedProjectsPage() {
         <br />
         다른 프로젝트들은 아래 링크를 클릭하면 볼 수 있습니다.
       </p>
-      <button className="font-semibold text-red_color text-sm md:text-base">
-        <Link href="/projects">➡ 더 많은 프로젝트 보러가기</Link>
+      <button className="font-semibold text-blue_color text-sm md:text-base">
+        <Link href="/projects">더 많은 프로젝트 보러가기</Link>
       </button>
       <ul>
         {featuredProject.map((project) => (
