@@ -23,11 +23,15 @@ export default function Header() {
       <nav
         className={`absolute top-[5vh] transition-all duration-300 ease-in-out md:static md:opacity-100 left-0 w-full md:w-fit  ${
           toggleHeader
-            ? "top-[5vh] opacity-100 md:top-0"
-            : "top-[-200vh] opacity-0"
+            ? "top-[5vh] opacity-100 md:top-0 "
+            : "top-[-200vh] opacity-0 hidden"
         } font-hambak text-gray-500 `}
       >
-        <ul className="flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg">
+        <ul
+          className={`flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg ${
+            toggleHeader ? "bg-white opacity-90" : "bg-none"
+          } `}
+        >
           <li onClick={() => setToggleHeader(!toggleHeader)}>
             <Link href="/">Home</Link>
           </li>
