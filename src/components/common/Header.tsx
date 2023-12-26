@@ -8,10 +8,10 @@ export default function Header() {
   const text = useTypeword("yoon.", 60);
 
   return (
-    <header className="flex flex-col justify-between items-center mx-auto w-11/12  top-0 h-[10vh] md:backdrop-blur-sm md:flex-row md:sticky z-50 relative">
+    <header className="flex flex-col justify-between items-center mx-auto w-11/12 top-0  sm:h-[12vh] md:h-[12vh] lg:h-[10vh]  backdrop-blur-md md:flex-row sticky z-50 pb-[3px]">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
         <Link href="/">
-          <span className="text-2xl font-light font-shrik border-b-[3px] border-b-blue_color pr-5">
+          <span className="text-2xl font-light font-shrik border-b-[3px] border-b-blue_color pr-5 ml-2">
             {text}
           </span>
         </Link>
@@ -35,19 +35,29 @@ export default function Header() {
           } md:bg-transparent`}
         >
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/">Home</Link>
+            <Link href="/" className="hover:text-blue_color">
+              Home
+            </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/about">About</Link>
+            <Link href="/about" className="hover:text-blue_color">
+              About
+            </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/skills">Skills</Link>
+            <Link href="/skills" className="hover:text-blue_color">
+              Skills
+            </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects" className="hover:text-blue_color">
+              Projects
+            </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" className="hover:text-blue_color">
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
