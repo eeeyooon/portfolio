@@ -1,16 +1,18 @@
 "use client";
+import useTypeword from "@/hooks/useTypeword";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
+  const text = useTypeword("yoon.", 60);
 
   return (
     <header className="flex flex-col justify-between items-center mx-auto w-11/12  top-0 h-[10vh] md:backdrop-blur-sm md:flex-row md:sticky z-50 relative">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
         <Link href="/">
-          <span className="text-2xl font-bold font-hambak border-b-[3px] border-b-blue_color pr-5 pb-1">
-            yoon
+          <span className="text-2xl font-light font-shrik border-b-[3px] border-b-blue_color pr-5">
+            {text}
           </span>
         </Link>
         <button
@@ -25,12 +27,12 @@ export default function Header() {
           toggleHeader
             ? "top-[5vh] opacity-100 md:top-0 pointer-events-auto"
             : "top-[-200vh] opacity-0  pointer-events-none lg:pointer-events-auto md:pointer-events-auto"
-        } font-hambak text-gray-500 `}
+        } font-dohyeon text-gray-500 `}
       >
         <ul
-          className={`flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg ${
-            toggleHeader ? "bg-white opacity-90" : "bg-none"
-          } `}
+          className={`flex flex-col gap-4 py-5   text-base text-center md:flex-row md:gap-7 md:text-lg bg-none ${
+            toggleHeader ? "bg-white opacity-90" : ""
+          } md:bg-transparent`}
         >
           <li onClick={() => setToggleHeader(!toggleHeader)}>
             <Link href="/">Home</Link>
