@@ -10,7 +10,7 @@ export default function ProjectGrid({ projects }: Props) {
     a.startDate > b.startDate ? -1 : 1
   );
   return (
-    <ul className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-6">
+    <ul className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-8">
       {sortedProjects.map((project) => (
         <li key={project.path}>
           <ProjectCard project={project} />
