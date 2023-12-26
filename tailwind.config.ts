@@ -14,6 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
+        pretendard: ["Pretendard-Regular", "sans-serif"],
+        gmarket: ["GmarketSansMedium", "sans-serif"],
+        dohyeon: ["BMDOHYEON", "sans-serif"],
         hambak: ["SF_HambakSnow", "sans-serif"],
         scoreLight: ["S-CoreDream-3Light", "sans-serif"],
         scoreRegular: ["S-CoreDream-4Regular", "sans-serif"],
@@ -22,7 +25,7 @@ const config: Config = {
         puraddak: ["PuradakGentleGothicR", "sans-serif"],
       },
       colors: {
-        primary: "#FFF7EA",
+        primary: "#ffffff",
         red_color: "#EF7373",
         blue_color: "#4561B7",
         yellow_color: "#FFC267",

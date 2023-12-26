@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className="bg-primary font-scoreLight flex flex-col max-w-screen-2xl mx-auto scrollbar-hide w-full selection:bg-red_color">
+      <body className="bg-primary font-pretendard flex flex-col max-w-screen-2xl mx-auto scrollbar-hide w-full selection:bg-red_color">
         <Header />
         <main className="relative grow w-11/12 mx-auto md:w4-5">
           {children}
