@@ -8,7 +8,7 @@ export default function Header() {
   const text = useTypeword("yoon.", 60);
 
   return (
-    <header className="flex flex-col justify-between items-center mx-auto w-11/12 top-0  sm:h-[12vh] md:h-[12vh] lg:h-[10vh]  backdrop-blur-md md:flex-row sticky z-50 pb-[3px]">
+    <header className="flex flex-col justify-between items-center mx-auto w-11/12 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-50 pb-[3px]">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
         <Link href="/">
           <span className="text-2xl font-light font-shrik border-b-[3px] border-b-blue_color pr-5 ml-2">
@@ -27,10 +27,10 @@ export default function Header() {
           toggleHeader
             ? "top-[5vh] opacity-100 md:top-0 pointer-events-auto"
             : "top-[-200vh] opacity-0  pointer-events-none lg:pointer-events-auto md:pointer-events-auto"
-        } font-dohyeon text-gray-500 `}
+        } font-dohyeon text-gray-600 `}
       >
         <ul
-          className={`flex flex-col gap-4 py-5   text-base text-center md:flex-row md:gap-7 md:text-lg bg-none ${
+          className={`flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg bg-none ${
             toggleHeader ? "bg-white opacity-90" : ""
           } md:bg-transparent`}
         >
