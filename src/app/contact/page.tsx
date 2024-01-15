@@ -21,13 +21,13 @@ export default function ContactPage() {
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="text-5xl hover:text-blue-500"
+              className="text-5xl hover:text-blue_color"
             >
               {link.icon}
             </a>
           ))}
         </ul>
-        <h2 className="text-3xl font-bold my-8">Or Send me an email</h2>
+        <h2 className="text-2xl font-bold my-8">Or Send me an email</h2>
         <ContactForm />
       </div>
     </section>

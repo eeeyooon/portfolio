@@ -21,10 +21,29 @@ export default function ContactForm() {
     null
   );
 
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log(form);
+
+    setContactModal({ message: "성공", state: "success" });
+    setTimeout(() => {
+      setContactModal(null);
+    }, 3000);
+  };
+
   return (
     <section className="w-full max-w-md">
       {contactModal && <ContactModal contactModal={contactModal} />}
-      <form className="w-full my-4 flex flex-col gap-2 p-4 rounded-xl bg-slate-200">
+      <form
+        onSubmit={onSubmit}
+        className="w-full my-4 flex flex-col gap-2 p-4 rounded-xl bg-slate-200"
+      >
         <label htmlFor="from">Your Email</label>
         <input
           type="email"
@@ -33,6 +52,7 @@ export default function ContactForm() {
           required
           autoFocus
           value={form.from}
+          onChange={onChange}
         />
         <label htmlFor="subject">Subject</label>
         <input
@@ -41,9 +61,16 @@ export default function ContactForm() {
           name="subject"
           required
           value={form.subject}
+          onChange={onChange}
         />
         <label htmlFor="message">message</label>
-        <textarea name="message" id="message" required value={form.message} />
+        <textarea
+          name="message"
+          id="message"
+          required
+          value={form.message}
+          onChange={onChange}
+        />
         <button>Submit</button>
       </form>
     </section>
