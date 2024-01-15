@@ -12,7 +12,7 @@ export async function sendContactEmail(email: EmailData) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "서버 요청 실패");
+    throw new Error(data.message || "서버 요청 실패 🙁");
   }
 
   return data;
