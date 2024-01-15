@@ -2,6 +2,7 @@
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import ContactModal, { ContactModalData } from "./ContactModal";
+import { sendContactEmail } from "@/service/contact";
 
 type Form = {
   from: string;
@@ -29,12 +30,25 @@ export default function ContactForm() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log(form);
-
-    setContactModal({ message: "성공", state: "success" });
-    setTimeout(() => {
-      setContactModal(null);
-    }, 3000);
+    sendContactEmail(form) //
+      .then(() => {
+        setContactModal({
+          message: "메일을 성공적으로 보냈습니다.",
+          state: "success",
+        });
+        setForm(DEFAULT_DATA);
+      }) //
+      .catch(() => {
+        setContactModal({
+          message: "메일 전송에 실패했습니다. 다시 시도해주세요.",
+          state: "error",
+        });
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setContactModal(null);
+        }, 3000);
+      });
   };
 
   return (
