@@ -20,6 +20,7 @@ export const projects: Projects[] = [
     docsUrl:
       "https://www.notion.so/eeeyooon/7436eeea62724ae1bbc26bce91980b50?pvs=4",
     serviceUrl: "",
+    images: 1,
   },
   {
     title: "Cafe-in",
@@ -38,6 +39,7 @@ export const projects: Projects[] = [
     githubUrl: "https://github.com/Cafe-Manage-Service-CAFE-IN/cafe-in",
     docsUrl: "https://github.com/Cafe-Manage-Service-CAFE-IN/cafe-in/wiki",
     serviceUrl: "https://cafe-in.web.app/",
+    images: 1,
   },
   {
     title: "Car-zip",
@@ -54,6 +56,7 @@ export const projects: Projects[] = [
     githubUrl: "https://github.com/LikeLion-FE-Final-Project03/car-zip",
     docsUrl: "https://github.com/LikeLion-FE-Final-Project03/car-zip/wiki",
     serviceUrl: "",
+    images: 1,
   },
   {
     title: "마켓칼리",
@@ -69,6 +72,7 @@ export const projects: Projects[] = [
     githubUrl: "https://github.com/sm022/marketkarly",
     docsUrl: "https://github.com/sm022/marketkarly/wiki",
     serviceUrl: "",
+    images: 1,
   },
   {
     title: "My Todo",
@@ -85,6 +89,7 @@ export const projects: Projects[] = [
     githubUrl: "https://github.com/eeeyooon/MyTodo",
     docsUrl: "",
     serviceUrl: "https://eeeyooon-todo.web.app/",
+    images: 1,
   },
   {
     title: "감정일기장",
@@ -101,6 +106,7 @@ export const projects: Projects[] = [
     githubUrl: "https://github.com/eeeyooon/Rebuild-EmotionDiary",
     docsUrl: "",
     serviceUrl: "https://eeeyooon-emotion-diary.web.app/",
+    images: 3,
   },
   {
     title: "ChatChat",
@@ -117,5 +123,6 @@ export const projects: Projects[] = [
     githubUrl: "https://github.com/eeeyooon/chatchat",
     docsUrl: "",
     serviceUrl: "",
+    images: 1,
   },
 ];

@@ -12,4 +12,5 @@ export type Projects = {
   githubUrl: string;
   docsUrl: string;
   serviceUrl: string;
+  images: number;
 };
