@@ -18,7 +18,10 @@ const ImageSlider = ({ children }: ImageSliderProps) => {
   };
 
   return (
-    <Slider className="lg:w-80 lg:h-80 sm:w-36 sm:h-48" {...settings}>
+    <Slider
+      className="lg:w-96 lg:h-auto md:w-64 md:h-auto sm:w-36 sm:h-36 mb-10"
+      {...settings}
+    >
       {children}
     </Slider>
   );

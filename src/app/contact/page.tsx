@@ -10,7 +10,10 @@ const LINKS = [
 
 export default function ContactPage() {
   return (
-    <section className="flex flex-col items-center">
+    <section
+      id="contact"
+      className="h-screen flex flex-col items-center justify-center pt-24"
+    >
       <h2 className="text-3xl font-bold my-2">Contact Me</h2>
       <p>vywns4569@gmail.com</p>
       <div>

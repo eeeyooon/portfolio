@@ -2,6 +2,7 @@
 import useTypeword from "@/hooks/useTypeword";
 import Link from "next/link";
 import { useState } from "react";
+import ROUTES from "@/constants/routes";
 
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
@@ -35,27 +36,27 @@ export default function Header() {
           } md:bg-transparent`}
         >
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/" className="hover:text-blue_color">
+            <Link href={ROUTES.HOME} className="hover:text-blue_color">
               Home
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/about" className="hover:text-blue_color">
+            <Link href={ROUTES.ABOUT} className="hover:text-blue_color">
               About
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/skills" className="hover:text-blue_color">
+            <Link href={ROUTES.SKILLS} className="hover:text-blue_color">
               Skills
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/projects" className="hover:text-blue_color">
+            <Link href={ROUTES.PROJECTS} className="hover:text-blue_color">
               Projects
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href="/contact" className="hover:text-blue_color">
+            <Link href={ROUTES.CONTACT} className="hover:text-blue_color">
               Contact
             </Link>
           </li>
