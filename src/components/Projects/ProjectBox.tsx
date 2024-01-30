@@ -1,6 +1,7 @@
 import { Projects } from "@/types/projects";
 import Image from "next/image";
 import StackIcons from "./StackIcons";
+import ImageSlider from "./ImageSlider";
 
 type Props = {
   project: Projects;
@@ -18,21 +19,33 @@ export default function ProjectBox({
     githubUrl,
     points,
     path,
+    images,
   },
 }: Props) {
+  const renderImages = () => {
+    let projectImages = [];
+    for (let i = 0; i < images; i++) {
+      projectImages.push(
+        <Image
+          key={`${title} + ${i}`}
+          className="rounded-lg"
+          src={`/images/projects/${path}${i > 0 ? i + 1 : ""}.png`}
+          alt={`${title} 이미지 ${i + 1}`}
+          width={500}
+          height={500}
+        />
+      );
+    }
+    return projectImages;
+  };
   return (
     <article className="flex flex-col items-center justify-center w-full h-screen gap-2 md:even:flex-row md:odd:flex-row-reverse">
       <div className="relative overflow-hidden w-60 md:w-1/2 md:h-1/2">
-        <a href={githubUrl} target="_blank" rel="noreferrer">
-          <Image
-            src={`/images/projects/${path}.png`}
-            alt="project_thumbnail"
-            width={500}
-            height={500}
-            priority
-            className="rounded-lg"
-          />
-        </a>
+        {images > 1 ? (
+          <ImageSlider>{renderImages()}</ImageSlider>
+        ) : (
+          renderImages()
+        )}
       </div>
       <div className="text-lg md:text-xl">
         <div className="text-center md:text-left mb-4 mx-6">
