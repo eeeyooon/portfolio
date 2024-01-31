@@ -3,10 +3,16 @@ import useTypeword from "@/hooks/useTypeword";
 import Link from "next/link";
 import { useState } from "react";
 import ROUTES from "@/constants/routes";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
   const text = useTypeword("yoon.", 60);
+  const pathname = usePathname();
+
+  const getLinkHref = (route: string) => {
+    return pathname === "/" ? route : "/" + route;
+  };
 
   return (
     <header className="flex flex-col justify-between items-center mx-auto w-11/12 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-50 pb-[3px]">
@@ -36,27 +42,42 @@ export default function Header() {
           } md:bg-transparent`}
         >
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href={ROUTES.HOME} className="hover:text-blue_color">
+            <Link
+              href={getLinkHref(ROUTES.HOME)}
+              className="hover:text-blue_color"
+            >
               Home
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href={ROUTES.ABOUT} className="hover:text-blue_color">
+            <Link
+              href={getLinkHref(ROUTES.ABOUT)}
+              className="hover:text-blue_color"
+            >
               About
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href={ROUTES.SKILLS} className="hover:text-blue_color">
+            <Link
+              href={getLinkHref(ROUTES.SKILLS)}
+              className="hover:text-blue_color"
+            >
               Skills
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href={ROUTES.PROJECTS} className="hover:text-blue_color">
+            <Link
+              href={getLinkHref(ROUTES.PROJECTS)}
+              className="hover:text-blue_color"
+            >
               Projects
             </Link>
           </li>
           <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link href={ROUTES.CONTACT} className="hover:text-blue_color">
+            <Link
+              href={getLinkHref(ROUTES.CONTACT)}
+              className="hover:text-blue_color"
+            >
               Contact
             </Link>
           </li>
