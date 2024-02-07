@@ -21,7 +21,7 @@ const ImageSlider = ({ children }: ImageSliderProps) => {
 
   return (
     <Slider
-      className="lg:w-[370px] lg:h-auto md:w-64 md:h-auto sm:w-36 sm:h-36 mb-10"
+      className="lg:w-2/3 lg:h-full md:w-[200px] md:h-[500px] sm:w-36 sm:h-36 mb-10"
       {...settings}
     >
       {children}
