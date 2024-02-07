@@ -1,23 +1,24 @@
-const TITLE = "text-lg md:text-2xl text-blue_color";
+const TITLE = "text-lg  md:text-2xl text-blue_color";
 const CONTENT = "text-base md:text-xl mb-3";
 export default function AboutContent() {
   return (
-    <div className=" mb-14 mt-10 tracking-wider">
-      <p className={TITLE}>별 하나에 추억과 별 하나에</p>
-      <p className={CONTENT}>
-        머니, 어머님, 나는 별 하나에 아름다운 말머니, 어머님, 나는 별 하나에
-        아름다운 말 하나에 아름다운 말
-      </p>
-      <p className={TITLE}>별 하나에 추억과 별 하나에</p>
-      <p className={CONTENT}>
-        머니, 어머님, 나는 별 하나에 아름다운 말머니, 어머님, 나는 별 하나에
-        아름다운 말 하나에 아름다운 말
-      </p>
-      <p className={TITLE}>별 하나에 추억과 별 하나에</p>
-      <p className={CONTENT}>
-        머니, 어머님, 나는 별 하나에 아름다운 말머하나에 아름다운 말하나에
-        아름다운 말다운 말
-      </p>
+    <div className=" mb-14 mt-4 tracking-wide">
+      <ul className="text-sm sm:text-lg md:text-lg font-scoreLight">
+        <li className="list-disc ml-4 marker:text-blue_color mb-2">
+          업무 효율성이 높고, 꼼꼼하게 설계하는 능력이 좋습니다.{" "}
+        </li>
+        <li className="list-disc ml-4 marker:text-blue_color mb-2">
+          모든 사용자가 동등하게 접근하고 이해할 수 있도록 웹 접근성을 준수하며
+          개선시킵니다.
+        </li>
+        <li className="list-disc ml-4 marker:text-blue_color mb-2">
+          유저와 가장 밀접한 서비스를 제공하기 때문에 UI/UX를 고려하며
+          개발합니다.
+        </li>
+        <li className="list-disc ml-4 marker:text-blue_color mb-2">
+          밝고 긍정적인 태도로, 항상 적극적이고 능동적인 개발자가 되겠습니다.
+        </li>
+      </ul>
     </div>
   );
 }

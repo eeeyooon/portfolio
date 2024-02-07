@@ -52,13 +52,15 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full max-w-md">
+    <section className="w-96">
       {contactModal && <ContactModal contactModal={contactModal} />}
       <form
         onSubmit={onSubmit}
         className="w-full my-4 flex flex-col gap-2 p-4 rounded-xl bg-slate-200"
       >
-        <label htmlFor="from">Your Email</label>
+        <label htmlFor="from" className="font-semibold mt-2">
+          Your Email
+        </label>
         <input
           type="email"
           id="from"
@@ -67,7 +69,9 @@ export default function ContactForm() {
           value={form.from}
           onChange={onChange}
         />
-        <label htmlFor="subject">Subject</label>
+        <label htmlFor="subject" className="font-semibold mt-2">
+          Subject
+        </label>
         <input
           type="text"
           id="subject"
@@ -76,7 +80,9 @@ export default function ContactForm() {
           value={form.subject}
           onChange={onChange}
         />
-        <label htmlFor="message">message</label>
+        <label htmlFor="message" className="font-semibold mt-2">
+          Message
+        </label>
         <textarea
           name="message"
           id="message"
@@ -84,7 +90,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={onChange}
         />
-        <button className="hover:font-semibold">Submit</button>
+        <button className="font-semibold hover:text-gray-500">Submit</button>
       </form>
     </section>
   );

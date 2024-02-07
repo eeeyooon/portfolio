@@ -3,20 +3,28 @@ import ProfileImage from "../../../public/images/profile.png";
 import AboutContent from "@/components/About/AboutContent";
 import SlotMachine from "@/components/About/SlotMachine";
 import { sentence } from "../../../data/about/aboutData";
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <>
       <section
         id="about"
-        className="container relative flex flex-col-reverse items-center h-screen gap-6 md:flex-row pt-24"
+        className="container relative flex flex-col-reverse items-center h-full sm:h-screen gap-6 md:flex-row pt-24"
       >
-        <h2 className="absolute top-2 font-dohyeon md:top-0 tracking-tighter text-blue_color text-2xl mt-32">
-          About Me
-        </h2>
         <div className="flex flex-col w-full md:w-2/3">
-          <h3 className="my-1 text-xl md:text-3xl font-scoreRegular">
-            <SlotMachine sentence={sentence} />
-          </h3>
+          <p className="my-1 text-xl text-center sm:text-left md:text-3xl font-scoreRegular">
+            안녕하세요.
+            <br />
+            프론트엔드 개발자<span className="font-bold"> 강지윤</span>입니다.
+          </p>
+          <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-gray-500 w-full justify-center sm:justify-start md:justify-start">
+            <Link href="https://github.com/eeeyooon" target="_blank">
+              GitHub
+            </Link>
+            <a href="mailto: vywns4569@gmail.com">Email</a>
+            <Link href="#contact">Contact</Link>
+          </div>
+          <SlotMachine sentence={sentence} />
           <AboutContent />
         </div>
         <div className="relative w-52 h-52 overflow-hidden md:w-96 md:h-96">

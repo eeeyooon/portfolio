@@ -40,7 +40,7 @@ export default function SlotMachine({ sentence }: Props) {
   }
 
   return (
-    <div className="flex items-center md:w-[800px] w-[600px]">
+    <div className="flex items-center md:w-[800px] w-[600px] font-scoreLight">
       <span className="md:text-2xl text-lg font-thin text-gray-700 mr-2">
         저는
       </span>
@@ -50,7 +50,7 @@ export default function SlotMachine({ sentence }: Props) {
           return (
             i === curIndex && (
               <motion.p
-                className="overflow-hidden font-scoreLight md:text-2xl text-lg font-thin text-gray-700 md:w-[300px] w-[225px]"
+                className="overflow-hidden font-scoreLight md:text-2xl text-lg font-thin text-gray-700 md:w-[350px] w-[265px]"
                 key={text}
                 custom={{ isLast }}
                 variants={variants}

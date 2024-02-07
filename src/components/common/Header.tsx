@@ -43,14 +43,6 @@ export default function Header() {
         >
           <li onClick={() => setToggleHeader(!toggleHeader)}>
             <Link
-              href={getLinkHref(ROUTES.HOME)}
-              className="hover:text-blue_color"
-            >
-              Home
-            </Link>
-          </li>
-          <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link
               href={getLinkHref(ROUTES.ABOUT)}
               className="hover:text-blue_color"
             >
