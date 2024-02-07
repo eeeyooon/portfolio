@@ -1,12 +1,6 @@
 import ContactForm from "@/components/Contact/ContactForm";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { SiVelog } from "react-icons/si";
-
-const LINKS = [
-  { icon: <AiFillGithub />, url: "https://github.com/eeeyooon" },
-  { icon: <AiFillLinkedin />, url: "" },
-  { icon: <SiVelog />, url: "" },
-];
+import { IoIosCall } from "react-icons/io";
+import { CiMail } from "react-icons/ci";
 
 export default function ContactPage() {
   return (
@@ -14,23 +8,20 @@ export default function ContactPage() {
       id="contact"
       className="h-screen mt-36 flex flex-col items-center justify-center pt-24"
     >
-      <h2 className="text-3xl font-bold my-2">Contact Me</h2>
-      <p>vywns4569@gmail.com</p>
+      <h2 className="font-bold my-2 font-dohyeon text-blue_color text-2xl md:text-3xl">
+        Contact Me
+      </h2>
+      <div className="w-96 flex flex-col justify-between mt-10">
+        <p className="flex justify-center items-center">
+          <IoIosCall className="mr-2" />
+          010-2613-2678
+        </p>
+        <p className="flex justify-center items-center">
+          <CiMail className="mr-2" />
+          vywns4569@gmail.com
+        </p>
+      </div>
       <div>
-        <ul className="flex gap-4 my-2 justify-center">
-          {LINKS.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-5xl hover:text-blue_color"
-            >
-              {link.icon}
-            </a>
-          ))}
-        </ul>
-        <h2 className="text-2xl font-bold my-8">Or Send me an email</h2>
         <ContactForm />
       </div>
     </section>

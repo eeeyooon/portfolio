@@ -64,7 +64,6 @@ export default function ContactForm() {
           id="from"
           name="from"
           required
-          autoFocus
           value={form.from}
           onChange={onChange}
         />
@@ -85,7 +84,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={onChange}
         />
-        <button>Submit</button>
+        <button className="hover:font-semibold">Submit</button>
       </form>
     </section>
   );
