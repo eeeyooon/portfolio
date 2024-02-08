@@ -2,7 +2,7 @@ import { Skills } from "@/types/skills";
 
 export const skills: Skills[] = [
   {
-    stack: "HTML5, CSS3",
+    stack: "HTML5 / CSS3",
     skillList: [
       "웹 서비스를 설계할 때 시각적인 부분뿐만 아니라 시맨틱한 마크업 구조를 생각하여 만듭니다.",
       "웹 표준을 지키고 웹 접근성 개선에 노력합니다.",
