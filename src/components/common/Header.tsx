@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
-  const text = useTypeword("yoon.", 60);
+  const text = useTypeword("eeeyoon.", 60);
   const pathname = usePathname();
 
   const getLinkHref = (route: string) => {
@@ -15,10 +15,10 @@ export default function Header() {
   };
 
   return (
-    <header className="flex flex-col justify-between items-center mx-auto w-11/12 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-50 pb-[3px]">
+    <header className="flex flex-col justify-between items-center mx-auto w-full px-8 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-50 pb-[3px]">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
         <Link href="/">
-          <span className="text-2xl font-light font-shrik border-b-[3px] border-b-blue_color pr-5 ml-2">
+          <span className="text-2xl font-light font-shrik text-blue_color pl-2">
             {text}
           </span>
         </Link>

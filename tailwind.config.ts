@@ -32,6 +32,16 @@ const config: Config = {
         brown_color: "#DEAF8E",
         redbrown_color: "#A52A2A",
       },
+      screens: {
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        lg: "1280px",
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

@@ -27,7 +27,7 @@ export default function AboutPage() {
           <SlotMachine sentence={sentence} />
           <AboutContent />
         </div>
-        <div className="relative w-52 h-52 overflow-hidden md:w-96 md:h-96">
+        <div className="relative w-48 h-48 overflow-hidden md:w-96 md:h-96">
           <Image
             src={ProfileImage}
             alt="Pictiure of the author"
