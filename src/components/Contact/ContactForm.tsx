@@ -56,7 +56,7 @@ export default function ContactForm() {
       {contactModal && <ContactModal contactModal={contactModal} />}
       <form
         onSubmit={onSubmit}
-        className="w-full my-4 flex flex-col gap-2 p-4 rounded-xl bg-slate-200"
+        className="w-full my-4 flex flex-col gap-2 p-4 rounded-xl bg-orange-100"
       >
         <label htmlFor="from" className="font-semibold mt-2">
           Your Email

@@ -6,9 +6,9 @@ export default function ContactPage() {
   return (
     <section
       id="contact"
-      className="h-screen mt-12 flex flex-col items-center justify-center"
+      className="h-screen mt-12 flex flex-col items-center justify-center selection:bg-brown_color"
     >
-      <h2 className="font-bold my-2 font-dohyeon text-blue_color text-xl md:text-3xl">
+      <h2 className="font-bold my-2 font-dohyeon text-brown_color text-xl md:text-3xl">
         Contact Me
       </h2>
       <div className="w-96 flex flex-col justify-between mt-10">
