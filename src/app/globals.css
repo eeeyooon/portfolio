@@ -84,3 +84,17 @@ a {
     -webkit-text-stroke: 3px #ef7373;
   }
 }
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
