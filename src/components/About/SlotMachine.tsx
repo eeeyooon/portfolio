@@ -40,7 +40,7 @@ export default function SlotMachine({ sentence }: Props) {
   }
 
   return (
-    <div className="flex items-center md:w-[800px] w-[600px] font-scoreLight">
+    <div className="flex items-center md:w-[800px] w-[600px] font-scoreLight selection:bg-brown_color">
       <span className="md:text-2xl text-lg font-thin text-gray-700 mr-2">
         저는
       </span>

@@ -6,7 +6,7 @@ export default async function ProjectsPage() {
       id="projects"
       className="h-full pt-12 mb-10 selection:bg-blue_color"
     >
-      <h2 className="text-center font-dohyeon text-blue_color text-xl md:text-3xl mb-6">
+      <h2 className="text-center font-dohyeon text-blue_color text-xl md:text-3xl mb-6 selection:bg-brown_color">
         Projects
       </h2>
       <p className="text-center text-base md:text-xl">

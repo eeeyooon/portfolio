@@ -8,7 +8,7 @@ export default function ContactPage() {
       id="contact"
       className="h-screen mt-12 flex flex-col items-center justify-center selection:bg-brown_color"
     >
-      <h2 className="font-bold my-2 font-dohyeon text-brown_color text-xl md:text-3xl">
+      <h2 className="font-bold my-2 font-dohyeon text-brown_color text-xl md:text-3xl selection:bg-redbrown_color">
         Contact Me
       </h2>
       <div className="w-96 flex flex-col justify-between mt-10">

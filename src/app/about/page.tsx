@@ -17,7 +17,7 @@ export default function AboutPage() {
             <br />
             프론트엔드 개발자<span className="font-bold"> 강지윤</span>입니다.
           </p>
-          <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-gray-500 w-full justify-center sm:justify-start md:justify-start">
+          <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-gray-500 w-full justify-center sm:justify-start md:justify-start selection:bg-brown_color">
             <Link
               href="https://github.com/eeeyooon"
               target="_blank"
