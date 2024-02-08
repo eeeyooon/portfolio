@@ -1,5 +1,5 @@
-import SkillGrid from "@/components/Skills/SkillGrid";
-import { skills } from "../../../data/skill/skillData";
+import SkillGrid from "@/components/skills/SkillGrid";
+import { skills } from "../../../data/skills/skillData";
 export default function SkillsPage() {
   return (
     <section id="skills" className="h-full py-24 selection:bg-brown_color">

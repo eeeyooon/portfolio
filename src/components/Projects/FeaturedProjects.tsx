@@ -1,4 +1,4 @@
-import { projects } from "../../../data/projectData/projectData";
+import { projects } from "../../../data/projects/projectData";
 import ProjectBox from "./ProjectBox";
 import Link from "next/link";
 

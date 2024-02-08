@@ -1,5 +1,5 @@
-import ProjectGrid from "@/components/Projects/ProjectGrid";
-import { projects } from "../../../data/projectData/projectData";
+import ProjectGrid from "@/components/projects/ProjectGrid";
+import { projects } from "../../../data/projects/projectData";
 export default async function ProjectsPage() {
   return (
     <section

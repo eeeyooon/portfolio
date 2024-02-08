@@ -1,4 +1,4 @@
-import ContactForm from "@/components/Contact/ContactForm";
+import ContactForm from "@/components/contact/ContactForm";
 import { IoIosCall } from "react-icons/io";
 import { CiMail } from "react-icons/ci";
 

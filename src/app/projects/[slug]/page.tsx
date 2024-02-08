@@ -1,5 +1,5 @@
-import ProjectBox from "@/components/Projects/ProjectBox";
-import { projects } from "../../../../data/projectData/projectData";
+import ProjectBox from "@/components/projects/ProjectBox";
+import { projects } from "../../../../data/projects/projectData";
 
 type Props = {
   params: {
