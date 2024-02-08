@@ -18,11 +18,22 @@ export default function AboutPage() {
             프론트엔드 개발자<span className="font-bold"> 강지윤</span>입니다.
           </p>
           <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-gray-500 w-full justify-center sm:justify-start md:justify-start">
-            <Link href="https://github.com/eeeyooon" target="_blank">
+            <Link
+              href="https://github.com/eeeyooon"
+              target="_blank"
+              className="hover:font-semibold"
+            >
               GitHub
             </Link>
-            <a href="mailto: vywns4569@gmail.com">Email</a>
-            <Link href="#contact">Contact</Link>
+            <a
+              href="mailto: vywns4569@gmail.com"
+              className="hover:font-semibold"
+            >
+              Email
+            </a>
+            <Link href="#contact" className="hover:font-semibold">
+              Contact
+            </Link>
           </div>
           <SlotMachine sentence={sentence} />
           <AboutContent />

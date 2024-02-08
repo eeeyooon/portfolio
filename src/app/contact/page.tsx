@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <section
       id="contact"
-      className="h-screen mt-36 flex flex-col items-center justify-center pt-24"
+      className="h-screen mt-12 flex flex-col items-center justify-center"
     >
       <h2 className="font-bold my-2 font-dohyeon text-blue_color text-xl md:text-3xl">
         Contact Me
@@ -16,7 +16,7 @@ export default function ContactPage() {
           <IoIosCall className="mr-2" />
           010-2613-2678
         </p>
-        <p className="flex justify-center items-center">
+        <p className="flex justify-center items-center my-2">
           <CiMail className="mr-2" />
           vywns4569@gmail.com
         </p>
