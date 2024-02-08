@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section id="home">
       <AboutPage />
-      {/* <SkillsPage /> */}
+      <SkillsPage />
       <ProjectsPage />
       <ContactPage />
     </section>

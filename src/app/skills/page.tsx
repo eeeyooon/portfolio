@@ -1,7 +1,12 @@
+import SkillGrid from "@/components/Skills/SkillGrid";
+import { skills } from "../../../data/skill/skillData";
 export default function SkillsPage() {
   return (
-    <section id="skills" className="h-screen pt-24  bg-red-300">
-      <h2 className="text-lg">SkillsPage</h2>
+    <section id="skills" className="h-full py-24">
+      <h2 className="text-center font-dohyeon text-brown_color text-xl md:text-3xl mb-10">
+        Skills
+      </h2>
+      <SkillGrid skills={skills} />
     </section>
   );
 }
