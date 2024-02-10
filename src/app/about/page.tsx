@@ -3,8 +3,8 @@ import ProfileImage from "../../../public/images/profile.jpg";
 import { sentence } from "../../../data/about/aboutData";
 import Link from "next/link";
 import ScrollArrow from "@/components/common/ScrollArrow";
-import AboutContent from "@/components/About/AboutContent";
-import SlotMachine from "@/components/About/SlotMachine";
+import AboutContent from "@/components/about/AboutContent";
+import SlotMachine from "@/components/about/SlotMachine";
 export default function AboutPage() {
   return (
     <>
