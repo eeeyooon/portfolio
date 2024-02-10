@@ -1,5 +1,5 @@
 import { projects } from "../../../../data/projects/projectData";
-import ProjectBox from "./../../../components/projects/ProjectBox";
+import ProjectBox from "@/components/Projects/ProjectBox";
 type Props = {
   params: {
     slug: string;
