@@ -84,7 +84,7 @@ export default function ProjectBox({
             </div>
             {serviceUrl && (
               <Link href={serviceUrl}>
-                <p className="mx-auto text-sm text-blue_color w-32 hover:font-semibold">
+                <p className="mx-auto lg:mx-0 md:mx-0 text-sm text-blue_color w-32 hover:font-semibold">
                   🎈 서비스 사용해보기
                 </p>
               </Link>
