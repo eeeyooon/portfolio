@@ -1,4 +1,4 @@
-import SkillGrid from "@/components/skills/SkillGrid";
+import SkillGrid from "@/components/Skills/SkillGrid";
 import { skills } from "../../../data/skills/skillData";
 import ScrollArrow from "@/components/common/ScrollArrow";
 export default function SkillsPage() {
