@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfileImage from "../../../public/images/profile.png";
+import ProfileImage from "../../../public/images/profile.jpg";
 import AboutContent from "@/components/about/AboutContent";
 import SlotMachine from "@/components/about/SlotMachine";
 import { sentence } from "../../../data/about/aboutData";
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <SlotMachine sentence={sentence} />
             <AboutContent />
           </div>
-          <div className="relative w-48 h-48 overflow-hidden md:w-96 md:h-96">
+          <div className="relative w-48 h-60 overflow-hidden md:w-80 md:h-96">
             <Image
               src={ProfileImage}
               alt="Pictiure of the author"
