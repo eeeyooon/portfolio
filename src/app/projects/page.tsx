@@ -1,6 +1,6 @@
-import ProjectGrid from "@/components/projects/ProjectGrid";
 import { projects } from "../../../data/projects/projectData";
 import ScrollArrow from "@/components/common/ScrollArrow";
+import ProjectGrid from "./../../components/projects/ProjectGrid";
 export default async function ProjectsPage() {
   return (
     <section

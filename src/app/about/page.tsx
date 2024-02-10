@@ -1,10 +1,10 @@
 import Image from "next/image";
 import ProfileImage from "../../../public/images/profile.jpg";
-import AboutContent from "@/components/about/AboutContent";
-import SlotMachine from "@/components/about/SlotMachine";
 import { sentence } from "../../../data/about/aboutData";
 import Link from "next/link";
 import ScrollArrow from "@/components/common/ScrollArrow";
+import AboutContent from "./../../components/about/AboutContent";
+import SlotMachine from "./../../components/about/SlotMachine";
 export default function AboutPage() {
   return (
     <>
