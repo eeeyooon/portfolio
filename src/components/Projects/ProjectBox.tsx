@@ -42,7 +42,7 @@ export default function ProjectBox({
     return projectImages;
   };
   return (
-    <article className="flex flex-col w-full h-full gap-2 py-10">
+    <article className="flex flex-col w-full h-full gap-2 py-10 selection:bg-brown_color">
       <div className="flex flex-col items-center justify-center gap-2 sm:flex-row-reverse">
         <div className="relative overflow-hidden w-2/3 lg:w-2/3 md:w-1/3 sm:w-2/3 md:h-[200px] lg:h-auto lg:pl-20">
           {images > 1 ? (
@@ -84,7 +84,7 @@ export default function ProjectBox({
             </div>
             {serviceUrl && (
               <Link href={serviceUrl}>
-                <p className="mx-auto text-sm text-blue_color hover:font-sembibold">
+                <p className="mx-auto text-sm text-blue_color w-32 hover:font-semibold">
                   🎈 서비스 사용해보기
                 </p>
               </Link>
@@ -98,7 +98,7 @@ export default function ProjectBox({
       <div className="text-left mx-6 mt-8">
         <ul>
           {points.map((point, idx) => (
-            <li key={`${point}-${idx}`} className="text-base md:text-lg">
+            <li key={`${point}-${idx}`} className="text-base md:text-lg my-1">
               - {point}
             </li>
           ))}
