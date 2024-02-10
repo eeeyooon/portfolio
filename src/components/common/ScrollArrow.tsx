@@ -15,7 +15,7 @@ export default function ScrollArrow({ targetId }: Props) {
   };
 
   return (
-    <div className="w-6 h-6 mx-auto pulse-animation">
+    <div className="w-6 h-6 mx-auto pulse-animation  invisible lg:visible">
       <Link href={getLinkHref(targetId)}>
         {targetId === "#about" ? (
           <FaArrowAltCircleUp className="text-gray-300 w-6 h-6" />

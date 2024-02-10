@@ -2,6 +2,8 @@ import { Projects } from "@/types/projects";
 import Image from "next/image";
 import StackIcons from "./StackIcons";
 import ImageSlider from "./ImageSlider";
+import { IoLogoGithub } from "react-icons/io";
+import Link from "next/link";
 
 type Props = {
   project: Projects;
@@ -17,6 +19,7 @@ export default function ProjectBox({
     startDate,
     endDate,
     githubUrl,
+    serviceUrl,
     points,
     path,
     images,
@@ -50,7 +53,12 @@ export default function ProjectBox({
         </div>
         <div className="h-full flex flex-col justify-center">
           <div className="text-center lg:text-left md:text-left mb-4 mx-6">
-            <h3 className="text-xl md:text-2xl font-scoreRegular">{title}</h3>
+            <div className="flex justify-center md:justify-start lg:justify-start items-center">
+              <h3 className="text-xl md:text-2xl font-scoreRegular">{title}</h3>
+              <Link href={githubUrl}>
+                <IoLogoGithub className="w-6 h-6 ml-2" />
+              </Link>
+            </div>
             <span className="text-lg mr-2">{intro}</span>
             {category.map((keyword) => (
               <span
@@ -74,6 +82,13 @@ export default function ProjectBox({
                 <StackIcons key={stack} stack={stack} />
               ))}
             </div>
+            {serviceUrl && (
+              <Link href={serviceUrl}>
+                <p className="mx-auto text-sm text-blue_color hover:font-sembibold">
+                  🎈 서비스 사용해보기
+                </p>
+              </Link>
+            )}
           </div>
           <div className="mx-6">
             <p className="text-base md:text-lg">{description}</p>
