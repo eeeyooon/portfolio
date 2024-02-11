@@ -14,7 +14,7 @@ function SkillCard({ skill: { stack, skillList } }: Props) {
           {skillList.map((skillItem, idx) => (
             <li
               key={`${stack}${idx}`}
-              className="mb-2 list-disc pl-1 ml-8 pr-4 font-scoreRegular lg:text-base md:text-base"
+              className="mb-2 list-disc pl-1 ml-8 pr-4 font-scoreLight lg:text-base md:text-base"
             >
               {skillItem}
             </li>

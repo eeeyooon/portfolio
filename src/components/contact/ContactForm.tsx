@@ -52,7 +52,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-96">
+    <section className="w-96 px-6">
       {contactModal && <ContactModal contactModal={contactModal} />}
       <form
         onSubmit={onSubmit}

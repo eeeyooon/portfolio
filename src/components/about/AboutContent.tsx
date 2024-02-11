@@ -1,11 +1,9 @@
-const TITLE = "text-lg  md:text-2xl text-blue_color";
-const CONTENT = "text-base md:text-xl mb-3";
 export default function AboutContent() {
   return (
-    <div className=" mb-14 mt-4 tracking-wide">
-      <ul className="text-sm sm:text-lg md:text-lg font-scoreLight">
+    <div className=" mb-14 mt-6 tracking-wide">
+      <ul className="text-sm lg:text-lg md:text-lg font-scoreLight">
         <li className="list-disc ml-4 marker:text-blue_color mb-2">
-          업무 효율성이 높고, 꼼꼼하게 설계하는 능력이 좋습니다.{" "}
+          업무 효율성이 높고, 꼼꼼하게 설계하는 능력이 좋습니다.
         </li>
         <li className="list-disc ml-4 marker:text-blue_color mb-2">
           모든 사용자가 동등하게 접근하고 이해할 수 있도록 웹 접근성을 준수하며
