@@ -32,7 +32,7 @@ export default function Header() {
       <nav
         className={`absolute top-[5vh] transition-all duration-300 ease-in-out md:static md:opacity-100 left-0 w-full md:w-fit  ${
           toggleHeader
-            ? "top-[18px] opacity-100 md:top-0 pointer-events-auto mt-4"
+            ? "top-[12px] opacity-100 md:top-0 pointer-events-auto mt-2"
             : "top-[-200vh] opacity-0  pointer-events-none lg:pointer-events-auto md:pointer-events-auto"
         } font-dohyeon text-gray-600 `}
       >
