@@ -12,11 +12,12 @@
 <br/>
 
 **NextJS(v13+)**
+
 NextJS의 SSG와 SSR을 혼합하는 하이브리드 방식으로, 페이지에 따라 가장 최적화된 렌더링 방식을 선택하여 사용하였습니다. 기본적으로는 SSG로 생성된 페이지를 제공하여, 초기 로딩 시간(TTV)을 단축시켰고 프로젝트 세부사항 페이지의 경우 기본적인 UI는 유지하고, 프로젝트마다 컨텐츠만 바뀌도록 다이나믹 라우팅을 설정하였습니다.
 
 <br/>
 
-[💡 포트폴리오 사이트 보러가기](https://portfolio-eeeyooon.vercel.app/)
+🌊 [포트폴리오 사이트 보러가기](https://portfolio-eeeyooon.vercel.app/)
 
 <br/>
 <br/>
@@ -26,7 +27,9 @@ NextJS의 SSG와 SSR을 혼합하는 하이브리드 방식으로, 페이지에 
 ## 프로젝트 개요
 
 🎈 프로젝트 기간 : `231109` ~ (진행 중)
+
 🌊 프로젝트 구성 : about | skills | projects | contact
+
 ✨ 핵심 기능 :
 
 - 반응형 웹 디자인
@@ -149,6 +152,14 @@ export async function POST(req: Request) {
 <br/>
 
 ![반응형](https://github.com/eeeyooon/portfolio/assets/102462534/72c2585c-db87-44e8-bcf9-568c09de3f17)
+
+<br/>
+
+Header의 Menu 역시 화면의 사이즈에 따라 변경됩니다.
+
+<br/>
+
+![반응형헤더](https://github.com/Cafe-Manage-Service-CAFE-IN/cafe-in/assets/102462534/3a168781-4bcb-45c8-941e-3035b2ed7e64)
 
 <br/>
 <br/>
