@@ -1,9 +1,14 @@
+"use client";
+
 import { Projects } from "@/types/projects";
 import Image from "next/image";
 import StackIcons from "./StackIcons";
 import ImageSlider from "./ImageSlider";
 import { IoLogoGithub } from "react-icons/io";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import ROUTES from "@/constants/routes";
 
 type Props = {
   project: Projects;
@@ -25,6 +30,12 @@ export default function ProjectBox({
     images,
   },
 }: Props) {
+  const pathname = usePathname();
+
+  const getLinkHref = (route: string) => {
+    return pathname === "/" ? route : "/" + route;
+  };
+
   const renderImages = () => {
     let projectImages = [];
     for (let i = 0; i < images; i++) {
@@ -36,6 +47,7 @@ export default function ProjectBox({
           alt={`${title} 이미지 ${i + 1}`}
           width={400}
           height={400}
+          priority
         />
       );
     }
@@ -43,8 +55,16 @@ export default function ProjectBox({
   };
   return (
     <article className="flex flex-col w-full h-full gap-2 py-10 selection:bg-brown_color">
+      <Link href={getLinkHref(ROUTES.PROJECTS)} className="ml-4 mb-2">
+        <button className="flex items-center">
+          <FaArrowLeft className="w-3 h-3 lg:w-4 lg:h-4" />
+          <span className="ml-2 text-sm lg:text-base">
+            프로젝트 목록으로 돌아가기
+          </span>
+        </button>
+      </Link>
       <div className="flex flex-col items-center justify-center gap-2 sm:flex-row-reverse">
-        <div className="relative overflow-hidden w-2/3 lg:w-2/3 md:w-1/3 sm:w-2/3 md:h-[200px] lg:h-auto lg:pl-20">
+        <div className="relative overflow-hidden w-2/3 lg:w-2/3 md:w-1/3 sm:w-2/3 md:h-[200px] lg:h-auto lg:pl-20 object-cover">
           {images > 1 ? (
             <ImageSlider>{renderImages()}</ImageSlider>
           ) : (
