@@ -2,6 +2,16 @@ import { experience } from "@/types/experience";
 
 export const experienceData: experience[] = [
   {
+    experienceName: "멋쟁이 빌더",
+    description:
+      "UX 디자이너, 백엔드 개발자, 프론트엔드 개발자가 모여 6주간 프로덕트를 완성하는 프로그램",
+    startDate: "2024-02-19",
+    endDate: "2024-03-29",
+    stacks: ["nextjs", "typescript", "emotion"],
+    points: [""],
+    urls: [""],
+  },
+  {
     experienceName: "구름톤 7기",
     description: "카카오와 구름이 주관한 제 7회 구름톤(해커톤)",
     startDate: "2023-09-05",
