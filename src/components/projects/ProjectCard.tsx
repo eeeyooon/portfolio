@@ -28,9 +28,9 @@ export default function ProjectCard({
                 <span
                   key={tag}
                   className={`text-xs rounded-lg px-2 mr-1  ${
-                    tag === "team"
+                    tag === "Team"
                       ? "bg-red_color"
-                      : tag === "personal"
+                      : tag === "Personal"
                       ? "bg-brown_color"
                       : "bg-yellow_color"
                   }`}

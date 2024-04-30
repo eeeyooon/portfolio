@@ -4,7 +4,7 @@ import FilterableProjects from "@/components/projects/FilterableProjects";
 export default async function ProjectsPage() {
   const categories = Array.from(
     new Set(projects.flatMap((project) => project.category))
-  );
+  ).sort();
   return (
     <section
       id="projects"

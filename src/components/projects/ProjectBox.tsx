@@ -84,9 +84,9 @@ export default function ProjectBox({
               <span
                 key={keyword}
                 className={`text-sm rounded-lg px-2 mr-1  ${
-                  keyword === "team"
+                  keyword === "Team"
                     ? "bg-red_color"
-                    : keyword === "personal"
+                    : keyword === "Personal"
                     ? "bg-brown_color"
                     : "bg-yellow_color"
                 }`}

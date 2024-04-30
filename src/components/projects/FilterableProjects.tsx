@@ -10,7 +10,7 @@ type Props = {
   categories: string[];
 };
 
-const ALL_PROJECTS = "All Projects";
+const ALL_PROJECTS = "All";
 
 export default function FilterableProjects({ projects, categories }: Props) {
   const [selected, setSelected] = useState(ALL_PROJECTS);
@@ -19,7 +19,7 @@ export default function FilterableProjects({ projects, categories }: Props) {
       ? projects
       : projects.filter((project) => project.category.includes(selected));
   return (
-    <section>
+    <section className="flex m-4">
       <ProjectGrid projects={filtered} />
       <Categories
         categories={[ALL_PROJECTS, ...categories]}
