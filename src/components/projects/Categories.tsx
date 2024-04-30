@@ -6,7 +6,7 @@ type Props = {
 
 export default function Categories({ categories, selected, onClick }: Props) {
   return (
-    <section className="text-center p-4 ml-4">
+    <section className="text-center p-4 ml-2">
       <h2 className="text-lg font-bold border-b border-blue_color mb-2">
         Category
       </h2>
