@@ -1,7 +1,10 @@
 import { projects } from "../../../data/projects/projectData";
 import ScrollArrow from "@/components/common/ScrollArrow";
-import ProjectGrid from "@/components/projects/ProjectGrid";
+import FilterableProjects from "@/components/projects/FilterableProjects";
 export default async function ProjectsPage() {
+  const categories = Array.from(
+    new Set(projects.flatMap((project) => project.category))
+  );
   return (
     <section
       id="projects"
@@ -13,7 +16,7 @@ export default async function ProjectsPage() {
       <p className="text-center w-60 md:w-auto lg:w-auto mx-auto font-scoreRegular text-sm md:text-xl">
         프로젝트를 클릭하면 해당 프로젝트의 상세 페이지로 이동합니다.
       </p>
-      <ProjectGrid projects={projects} />
+      <FilterableProjects projects={projects} categories={categories} />
       <ScrollArrow targetId="#contact" />
     </section>
   );

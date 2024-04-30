@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="relative w-48 h-60 md:w-80 md:h-96 overflow-hidden block lg:block md:hidden  object-cover">
             <Image
               src={ProfileImage}
-              alt="Pictiure of the author"
+              alt="Picture of the author"
               width={300}
               height={400}
               priority
