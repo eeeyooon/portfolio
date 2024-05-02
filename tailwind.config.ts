@@ -15,14 +15,11 @@ const config: Config = {
       },
       fontFamily: {
         pretendard: ["Pretendard-Regular", "sans-serif"],
-        gmarket: ["GmarketSansMedium", "sans-serif"],
         dohyeon: ["BMDOHYEON", "sans-serif"],
-        hambak: ["SF_HambakSnow", "sans-serif"],
         scoreLight: ["S-CoreDream-3Light", "sans-serif"],
         scoreRegular: ["S-CoreDream-4Regular", "sans-serif"],
         yeseva: ["Yeseva One", "sans-serif"],
         shrik: ["Shrikhand", "sans-serif"],
-        puraddak: ["PuradakGentleGothicR", "sans-serif"],
       },
       colors: {
         primary: "#ffffff",
