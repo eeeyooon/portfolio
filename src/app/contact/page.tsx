@@ -1,6 +1,5 @@
 import { IoIosCall } from "react-icons/io";
 import { CiMail } from "react-icons/ci";
-import ScrollArrow from "@/components/common/ScrollArrow";
 import ContactForm from "@/components/contact/ContactForm";
 
 export default function ContactPage() {
@@ -23,7 +22,6 @@ export default function ContactPage() {
         </p>
       </div>
       <ContactForm />
-      <ScrollArrow targetId="#about" />
     </section>
   );
 }

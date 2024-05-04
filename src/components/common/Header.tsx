@@ -2,17 +2,22 @@
 import useTypeword from "@/hooks/useTypeword";
 import Link from "next/link";
 import { useState } from "react";
-import ROUTES from "@/constants/routes";
-import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
   const text = useTypeword("eeeyoon.", 60);
-  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState("");
 
-  const getLinkHref = (route: string) => {
-    return pathname === "/" ? route : "/" + route;
+  const handleLinkClick = (route: string) => {
+    setActiveLink(route);
+    setToggleHeader(false);
+    const section = document.getElementById(route.slice(1));
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
+  const linkIsActive = (route: string) => activeLink === route;
 
   return (
     <header className="flex flex-col justify-between items-center mx-auto w-full px-8 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-50 pb-[3px] selection:bg-brown_color">
@@ -41,38 +46,21 @@ export default function Header() {
             toggleHeader ? "bg-white opacity-90" : ""
           } md:bg-transparent`}
         >
-          <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link
-              href={getLinkHref(ROUTES.ABOUT)}
-              className="hover:text-blue_color"
-            >
-              About
-            </Link>
-          </li>
-          <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link
-              href={getLinkHref(ROUTES.SKILLS)}
-              className="hover:text-blue_color"
-            >
-              Skills
-            </Link>
-          </li>
-          <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link
-              href={getLinkHref(ROUTES.PROJECTS)}
-              className="hover:text-blue_color"
-            >
-              Projects
-            </Link>
-          </li>
-          <li onClick={() => setToggleHeader(!toggleHeader)}>
-            <Link
-              href={getLinkHref(ROUTES.CONTACT)}
-              className="hover:text-blue_color"
-            >
-              Contact
-            </Link>
-          </li>
+          {["about", "skills", "projects", "contact"].map((route) => (
+            <li key={route}>
+              <a
+                href={`#${route}`}
+                className={
+                  linkIsActive(`#${route}`)
+                    ? "text-blue_color"
+                    : "hover:text-blue_color"
+                }
+                onClick={() => handleLinkClick(`#${route}`)}
+              >
+                {route.charAt(0).toUpperCase() + route.slice(1)}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
