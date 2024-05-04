@@ -1,6 +1,5 @@
 import SkillGrid from "@/components/skills/SkillGrid";
 import { skills } from "../../../data/skills/skillData";
-import ScrollArrow from "@/components/common/ScrollArrow";
 export default function SkillsPage() {
   return (
     <section id="skills" className="h-full py-24 selection:bg-brown_color ">
@@ -8,7 +7,6 @@ export default function SkillsPage() {
         Skills
       </h2>
       <SkillGrid skills={skills} />
-      <ScrollArrow targetId="#projects" />
     </section>
   );
 }

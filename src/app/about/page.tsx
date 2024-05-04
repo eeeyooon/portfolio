@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import ProfileImage from "../../../public/images/profile.jpg";
 import { sentence } from "../../../data/about/aboutData";
-import ScrollArrow from "@/components/common/ScrollArrow";
 import AboutContent from "@/components/about/AboutContent";
 import SlotMachine from "@/components/about/SlotMachine";
 export default function AboutPage() {
@@ -50,7 +49,6 @@ export default function AboutPage() {
             />
           </div>
         </div>
-        <ScrollArrow targetId="#skills" />
       </section>
     </>
   );
