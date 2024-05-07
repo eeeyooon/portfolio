@@ -20,7 +20,7 @@ export default function SkillGrid({ skills }: Props) {
   return (
     <ul
       ref={ref}
-      className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-8 mb-14"
+      className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mt-8 mb-14"
     >
       {skills.map((skill, index) => (
         <motion.li
