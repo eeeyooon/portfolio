@@ -16,7 +16,7 @@
 @font-face {
   font-family: "BMDOHYEON";
   font-display: swap;
-  src: local("BMDOHYEON"), url("/fonts/BMDOHYEON_ttf.ttf") format("ttf");
+  src: local("BMDOHYEON"), url("/fonts/BMDOHYEON_ttf.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
