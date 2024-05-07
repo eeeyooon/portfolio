@@ -1,12 +1,25 @@
 "use client";
 import useTypeword from "@/hooks/useTypeword";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
   const text = useTypeword("eeeyoon.", 60);
   const [activeLink, setActiveLink] = useState("");
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1900);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) {
+    return null;
+  }
 
   const handleLinkClick = (route: string) => {
     setActiveLink(route);
