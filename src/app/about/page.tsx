@@ -39,14 +39,14 @@ export default function AboutPage() {
             <SlotMachine sentence={sentence} />
             <AboutContent />
           </div>
-          <div className="relative w-48 h-60 md:w-80 md:h-96 overflow-hidden block sm:hidden lg:block md:hidden rounded-md">
+          <div className="relative w-48 h-60 md:w-80 md:h-96 overflow-hidden block sm:hidden lg:block md:hidden rounded-lg">
             <Image
               src={ProfileImage}
               alt="Picture of the author"
               width={300}
               height={400}
               priority
-              className="rounded-md object-cover w-full h-full"
+              className="rounded-lg object-cover w-full h-full"
             />
           </div>
         </div>
