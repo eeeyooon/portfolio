@@ -5,7 +5,7 @@ import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: "강지윤 | 프론트엔드 포트폴리오",
-  description: "Kang Ji Yun | Frontend Dev Portfolio",
+  description: "프론트엔드 개발자 강지윤의 포트폴리오입니다.",
 };
 
 export default function RootLayout({
