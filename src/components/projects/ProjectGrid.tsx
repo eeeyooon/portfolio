@@ -22,7 +22,7 @@ export default function ProjectGrid({ projects }: Props) {
   return (
     <ul
       ref={ref}
-      className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 mb-14 font-scoreRegular"
+      className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  mb-14 font-scoreRegular"
     >
       {sortedProjects.map((project, index) => (
         <motion.li

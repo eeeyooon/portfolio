@@ -1,3 +1,4 @@
+import Image from "next/image";
 type Props = {
   categories: string[];
   selected: string;
@@ -6,15 +7,19 @@ type Props = {
 
 export default function Categories({ categories, selected, onClick }: Props) {
   return (
-    <section className="text-center p-4 ml-2">
-      <h2 className="text-lg font-bold border-b border-blue_color  w-24 m-auto mb-2">
-        Category
-      </h2>
-      <ul>
+    <section className="text-center ml-2 flex leading-6 mt-2">
+      <Image
+        src={`/images/icons/icon-filter.png`}
+        alt="필터 아이콘"
+        priority
+        width={18}
+        height={18}
+      />
+      <ul className="ml-2 flex justify-center items-center mx-auto w-full rounded-3xl">
         {categories.map((category) => (
           <li
-            className={`cursor-pointer hover:text-blue_color ${
-              category === selected && "text-blue_color font-bold"
+            className={`mx-2 cursor-pointer text-base hover:text-gray-500 ${
+              category === selected && "text-blue_color"
             }`}
             key={category}
             onClick={() => onClick(category)}

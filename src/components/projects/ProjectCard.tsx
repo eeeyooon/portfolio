@@ -12,7 +12,7 @@ export default function ProjectCard({
 }: Props) {
   return (
     <Link href={`/projects/${path}`}>
-      <article className="rounded-md overflow-hidden shadow-md hover:shadow-xl my-4 lg:transition duration-300 lg:transform lg:hover:scale-105">
+      <article className="rounded-md overflow-x-hidden shadow-md hover:shadow-xl my-4 lg:transition duration-300 lg:transform lg:hover:scale-105">
         <Image
           className="w-full h-[240px] object-contain"
           src={`/images/projects/${path}.png`}

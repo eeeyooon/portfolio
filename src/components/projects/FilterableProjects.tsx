@@ -19,13 +19,17 @@ export default function FilterableProjects({ projects, categories }: Props) {
       ? projects
       : projects.filter((project) => project.category.includes(selected));
   return (
-    <section className="flex m-4 flex-col-reverse sm:flex-row md:flex-row lg:flex-row">
-      <ProjectGrid projects={filtered} />
-      <Categories
-        categories={[ALL_PROJECTS, ...categories]}
-        selected={selected}
-        onClick={setSelected}
-      />
+    <section className="flex m-4 flex-col">
+      <div className="flex items-start">
+        <Categories
+          categories={[ALL_PROJECTS, ...categories]}
+          selected={selected}
+          onClick={setSelected}
+        />
+      </div>
+      <div className="flex justify-center items-center">
+        <ProjectGrid projects={filtered} />
+      </div>
     </section>
   );
 }
