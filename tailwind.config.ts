@@ -20,6 +20,8 @@ const config: Config = {
         scoreRegular: ["S-CoreDream-4Regular", "sans-serif"],
         yeseva: ["Yeseva One", "sans-serif"],
         shrik: ["Shrikhand", "sans-serif"],
+        ghanachocolate: ["Ghanachocolate", "sans-serif"],
+        hambak: ["Hambak", "sans-serif"],
       },
       colors: {
         primary: "#ffffff",

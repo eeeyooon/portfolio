@@ -37,6 +37,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Ghanachocolate";
+  font-display: swap;
+  src: local("Ghanachocolate"), url("/fonts/Ghanachocolate.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hambak";
+  font-display: swap;
+  src: local("Hambak"), url("/fonts/Hambak.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   height: 100vh;
