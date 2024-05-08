@@ -13,7 +13,7 @@ export default function Header() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1900);
+    }, 3600);
     return () => clearTimeout(timer);
   }, []);
 

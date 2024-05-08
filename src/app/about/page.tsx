@@ -8,10 +8,12 @@ import ProfileImage from "../../../public/images/profile.jpg";
 import { sentence } from "../../../data/about/aboutData";
 import AboutContent from "@/components/about/AboutContent";
 import SlotMachine from "@/components/about/SlotMachine";
+import useTypeword from "@/hooks/useTypeword";
 
 export default function AboutPage() {
   const [showInitialMessage, setShowInitialMessage] = useState(true);
   const controls = useAnimation();
+  const onBoardText = useTypeword("I find joy in what I do.", 45);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -20,7 +22,7 @@ export default function AboutPage() {
       setShowInitialMessage(false);
       controls.start("visible");
       document.body.style.overflow = "";
-    }, 1200);
+    }, 2700);
 
     return () => {
       clearTimeout(timer);
@@ -39,7 +41,7 @@ export default function AboutPage() {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.7,
+        delay: 1,
         staggerChildren: 0.7,
       },
     },
@@ -51,7 +53,7 @@ export default function AboutPage() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.5,
+        duration: 1.7,
       },
     },
   };
@@ -61,18 +63,24 @@ export default function AboutPage() {
       <AnimatePresence>
         {showInitialMessage && (
           <motion.div
-            className="flex justify-center items-center h-screen"
+            className="flex flex-col justify-center items-center h-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1 }}
           >
-            <p className="my-1 text-lg text-center sm:text-left md:text-3xl font-scoreRegular">
-              안녕하세요.
-              <br />
-              프론트엔드 개발자<span className="font-bold"> 강지윤</span>
-              입니다.
+            <p className="text-lg text-center sm:text-left md:text-3xl font-hambak">
+              {onBoardText}
             </p>
+            <motion.span
+              className="text-lg text-center sm:text-left md:text-2xl font-scoreRegular mt-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.6 }}
+            >
+              즐거움을 찾는 개발자 <span className="font-bold">강지윤</span>
+              입니다.
+            </motion.span>
           </motion.div>
         )}
       </AnimatePresence>
