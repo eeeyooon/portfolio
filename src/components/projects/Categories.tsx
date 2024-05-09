@@ -18,7 +18,7 @@ export default function Categories({ categories, selected, onClick }: Props) {
       <ul className="ml-2 flex justify-center items-center mx-auto w-full rounded-3xl">
         {categories.map((category) => (
           <li
-            className={`mx-2 cursor-pointer text-base hover:text-gray-500 ${
+            className={`mx-2 cursor-pointer text-base text-stone-700 hover:text-gray-500 ${
               category === selected && "text-blue_color"
             }`}
             key={category}

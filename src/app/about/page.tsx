@@ -134,7 +134,7 @@ export default function AboutPage() {
               className="flex flex-col w-full md:w-2/3"
               variants={itemVariants}
             >
-              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-10">
+              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-8">
                 About Me
               </p>
               <SlotMachine sentence={sentence} />

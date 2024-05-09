@@ -22,7 +22,7 @@ export default function ProjectCard({
         />
         <div className="flex flex-col items-start p-4">
           <div className="flex flex-row justify-between w-full items-center mb-1">
-            <h3 className="text-base md:text-base font-bold">{title}</h3>
+            <h3 className="text-base md:text-base font-bold ">{title}</h3>
             <div className="my-1 ">
               {category.map((tag) => (
                 <span
