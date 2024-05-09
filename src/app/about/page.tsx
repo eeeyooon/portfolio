@@ -82,11 +82,11 @@ export default function AboutPage() {
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-xl text-center md:text-4xl font-ghanachocolate">
+            <p className="text-xl text-center md:text-4xl font-ghanachocolate text-stone-800">
               {onBoardText}
             </p>
             <motion.span
-              className="text-xl text-center md:text-3xl font-scoreRegular mt-4"
+              className="text-lg text-center sm:text-base md:text-xl font-scoreRegular mt-6 text-stone-800"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.6 }}
@@ -113,7 +113,7 @@ export default function AboutPage() {
               variants={itemVariants}
             >
               <motion.p
-                className="my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-12 left-7 sm:top-[3.2rem] sm:left-20 md:top-12 md:left-10 flex flex-col gap-1 md:gap-2"
+                className="my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-12 left-7 sm:top-[3.2rem] sm:left-20 md:top-12 md:left-10 flex flex-col gap-1 md:gap-2 text-stone-800"
                 variants={messageItemVariants}
               >
                 <span>I find joy in</span>
@@ -128,6 +128,24 @@ export default function AboutPage() {
                   priority
                   className="rounded-lg object-cover w-full h-full"
                 />
+              </div>
+              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-stone-600 w-full justify-center">
+                <Link
+                  href="https://github.com/eeeyooon"
+                  target="_blank"
+                  className="hover:font-semibold"
+                >
+                  GitHub
+                </Link>
+                <a
+                  href="mailto: vywns4569@gmail.com"
+                  className="hover:font-semibold"
+                >
+                  Email
+                </a>
+                <Link href="#contact" className="hover:font-semibold">
+                  Contact
+                </Link>
               </div>
             </motion.div>
             <motion.div
