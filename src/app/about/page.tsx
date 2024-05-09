@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { AnimatePresence, Variants, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import ProfileImage from "../../../public/images/profile.jpg";
 import { sentence } from "../../../data/about/aboutData";
@@ -13,6 +13,7 @@ import useTypeword from "@/hooks/useTypeword";
 export default function AboutPage() {
   const [showInitialMessage, setShowInitialMessage] = useState(true);
   const controls = useAnimation();
+
   const onBoardText = useTypeword("I find joy in what I do.", 45);
 
   useEffect(() => {
@@ -58,6 +59,18 @@ export default function AboutPage() {
     },
   };
 
+  const messageItemVariants = {
+    hidden: { y: -50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 1.8,
+      },
+    },
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -69,11 +82,11 @@ export default function AboutPage() {
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-lg text-center sm:text-left md:text-3xl font-hambak">
+            <p className="text-xl text-center md:text-4xl font-ghanachocolate">
               {onBoardText}
             </p>
             <motion.span
-              className="text-lg text-center sm:text-left md:text-2xl font-scoreRegular mt-4"
+              className="text-xl text-center md:text-3xl font-scoreRegular mt-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.6 }}
@@ -93,54 +106,39 @@ export default function AboutPage() {
         >
           <div
             id="about"
-            className="container relative flex flex-col-reverse items-center gap-6 md:flex-row pt-24"
+            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-24 selection:bg-brown_color"
           >
+            <motion.div
+              className="flex flex-col w-full justify-center items-center"
+              variants={itemVariants}
+            >
+              <motion.p
+                className="my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-12 left-7 sm:top-[3.2rem] sm:left-20 md:top-12 md:left-10 flex flex-col gap-1 md:gap-2"
+                variants={messageItemVariants}
+              >
+                <span>I find joy in</span>
+                <span> what I do.</span>
+              </motion.p>
+              <div className="w-60 h-72 md:w-[22rem] md:h-auto overflow-hidden block rounded-xl">
+                <Image
+                  src={ProfileImage}
+                  alt="Picture of the author"
+                  width={300}
+                  height={400}
+                  priority
+                  className="rounded-lg object-cover w-full h-full"
+                />
+              </div>
+            </motion.div>
             <motion.div
               className="flex flex-col w-full md:w-2/3"
               variants={itemVariants}
             >
-              <motion.p
-                className="my-1 text-lg text-center sm:text-left md:text-3xl font-scoreRegular"
-                variants={itemVariants}
-              >
-                안녕하세요.
-                <br />
-                프론트엔드 개발자<span className="font-bold"> 강지윤</span>
-                입니다.
-              </motion.p>
-              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-gray-500 w-full justify-center sm:justify-start md:justify-start selection:bg-brown_color">
-                <Link
-                  href="https://github.com/eeeyooon"
-                  target="_blank"
-                  className="hover:font-semibold"
-                >
-                  GitHub
-                </Link>
-                <a
-                  href="mailto: vywns4569@gmail.com"
-                  className="hover:font-semibold"
-                >
-                  Email
-                </a>
-                <Link href="#contact" className="hover:font-semibold">
-                  Contact
-                </Link>
-              </div>
+              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-10">
+                About Me
+              </p>
               <SlotMachine sentence={sentence} />
               <AboutContent />
-            </motion.div>
-            <motion.div
-              className="relative w-48 h-60 md:w-80 md:h-96 overflow-hidden block sm:hidden lg:block md:hidden rounded-lg"
-              variants={itemVariants}
-            >
-              <Image
-                src={ProfileImage}
-                alt="Picture of the author"
-                width={300}
-                height={400}
-                priority
-                className="rounded-lg object-cover w-full h-full"
-              />
             </motion.div>
           </div>
         </motion.section>

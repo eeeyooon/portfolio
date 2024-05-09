@@ -40,15 +40,15 @@ export default function SlotMachine({ sentence }: Props) {
   }
 
   return (
-    <div className="flex items-center md:w-[800px] w-[400px] font-scoreLight selection:bg-brown_color ">
-      <span className="md:text-2xl text-sm  text-gray-700 mr-2">저는</span>
+    <div className="flex items-center md:w-[800px] w-[400px] selection:bg-brown_color">
+      <span className="md:text-xl text-sm text-stone-600 mr-2">저는</span>
       <AnimatePresence mode="popLayout">
         {textList.map((text, i) => {
           const isLast = i === textList.length - 1 - count;
           return (
             i === curIndex && (
               <motion.p
-                className="overflow-hidden font-scoreLight md:text-2xl text-base text-gray-700 md:w-[350px] w-[230px]"
+                className="overflow-hidden  md:text-xl text-sm text-stone-600 md:w-[280px] w-[190px] sm:w-[190px]"
                 key={text}
                 custom={{ isLast }}
                 variants={variants}
@@ -67,14 +67,14 @@ export default function SlotMachine({ sentence }: Props) {
         })}
       </AnimatePresence>
       <motion.button
-        className="ml-1 md:text-base text-xs text-gray-600"
+        className="ml-1 md:text-base text-xs text-stone-600"
         onClick={handleClick}
         whileTap={{ scale: 0.9, scaleY: 1 }}
         whileHover={{ scaleY: -1 }}
       >
         <LuShuffle />
       </motion.button>
-      <span className="md:text-2xl text-sm text-gray-700 ml-2">입니다.</span>
+      <span className="md:text-xl text-sm text-stone-600 ml-2">입니다.</span>
     </div>
   );
 }
