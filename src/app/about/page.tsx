@@ -109,7 +109,7 @@ export default function AboutPage() {
             className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-24 selection:bg-brown_color"
           >
             <motion.div
-              className="flex flex-col w-full justify-center items-center"
+              className="flex flex-col w-full justify-center items-center basis-5/12"
               variants={itemVariants}
             >
               <motion.p

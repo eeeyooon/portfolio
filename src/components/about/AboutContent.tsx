@@ -17,8 +17,11 @@ export default function AboutContent() {
       </p>
       <p className="text-sm sm:text-base mt-4 lg:text-lg md:text-lg ">
         사람들을 만나는 걸 좋아해서, 다양한 직군과 함께 좋은 결과물을 만드는 데
-        관심이 많아요. 모두가 만족할 수 있는 협업을 목표로 개선할 점을 고민하고
-        항상 적극적으로 커뮤니케이션합니다.
+        관심이 많아요.
+      </p>
+      <p className="text-sm sm:text-base lg:text-lg md:text-lg ">
+        모두가 만족할 수 있는 협업을 목표로 개선할 점을 고민하고 항상 적극적으로
+        커뮤니케이션합니다.
       </p>
     </div>
   );
