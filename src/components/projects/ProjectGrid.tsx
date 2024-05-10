@@ -1,10 +1,10 @@
-import { Projects } from "@/types/projects";
+import { Project } from "@/types/project";
 import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 type Props = {
-  projects: Projects[];
+  projects: Project[];
 };
 
 export default function ProjectGrid({ projects }: Props) {

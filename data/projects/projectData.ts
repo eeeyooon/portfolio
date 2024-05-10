@@ -1,6 +1,6 @@
-import { Projects } from "@/types/projects";
+import { Project } from "@/types/project";
 
-export const projects: Projects[] = [
+export const projects: Project[] = [
   {
     title: "구글 폼 클론코딩",
     intro: "구글 폼 클론코딩 프로젝트",

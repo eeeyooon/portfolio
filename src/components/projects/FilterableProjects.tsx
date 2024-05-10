@@ -1,12 +1,12 @@
 "use client";
 
-import { Projects } from "@/types/projects";
+import { Project } from "@/types/project";
 import { useState } from "react";
 import ProjectGrid from "./ProjectGrid";
 import Categories from "./Categories";
 
 type Props = {
-  projects: Projects[];
+  projects: Project[];
   categories: string[];
 };
 

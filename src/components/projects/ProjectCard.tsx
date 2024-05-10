@@ -1,10 +1,10 @@
-import { Projects } from "@/types/projects";
+import { Project } from "@/types/project";
 import Link from "next/link";
 import Image from "next/image";
 import StackIcons from "./StackIcons";
 
 type Props = {
-  project: Projects;
+  project: Project;
 };
 
 export default function ProjectCard({
