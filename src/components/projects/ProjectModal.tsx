@@ -19,10 +19,16 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
     return null;
   }
 
+  const stopPropagation = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+  };
+
   return (
     <ModalPortal>
-      <ModalWrapper>
-        <ModalContainer>
+      <ModalWrapper onClick={onClose}>
+        <ModalContainer onClick={stopPropagation}>
           <button onClick={onClose}>close</button>
           <ProjectShortcut project={project} />
           <div className="bg-stone-300 h-96 mt-4">teststest</div>
