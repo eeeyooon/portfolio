@@ -18,19 +18,10 @@ export default function ProjectShortcut({
     endDate,
     githubUrl,
     serviceUrl,
-    path,
   },
 }: ProjectShortcutProps) {
   return (
     <article className="flex flex-col items-center">
-      <Image
-        className="rounded-lg"
-        src={`/images/projects/${path}.png`}
-        alt={`${title} 이미지`}
-        width={400}
-        height={400}
-        priority
-      />
       <h3 className="text-xl md:text-2xl font-scoreRegular mt-5">{title}</h3>
       <div className="my-2 text-stone-500">
         <span>{startDate} ~ </span>
