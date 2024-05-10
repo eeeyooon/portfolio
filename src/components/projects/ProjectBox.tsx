@@ -1,6 +1,6 @@
 "use client";
 
-import { Projects } from "@/types/project";
+import { Project } from "@/types/project";
 import Image from "next/image";
 import StackIcons from "./StackIcons";
 import ImageSlider from "./ImageSlider";
@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 import ROUTES from "@/constants/routes";
 
 type Props = {
-  project: Projects;
+  project: Project;
 };
 
 export default function ProjectBox({
