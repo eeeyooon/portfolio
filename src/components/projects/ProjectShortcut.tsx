@@ -3,9 +3,14 @@ import { project9 } from "../../../data/projects/projectDetailData.ts/project9";
 import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io";
 import StackIcons from "./StackIcons";
+import { Project } from "@/types/project";
 
-export default function ProjectShortcut() {
-  const {
+type ProjectShortcutProps = {
+  project: Project;
+};
+
+export default function ProjectShortcut({
+  project: {
     title,
     description,
     stacks,
@@ -14,8 +19,8 @@ export default function ProjectShortcut() {
     githubUrl,
     serviceUrl,
     path,
-  } = project9;
-
+  },
+}: ProjectShortcutProps) {
   return (
     <article className="flex flex-col items-center">
       <Image

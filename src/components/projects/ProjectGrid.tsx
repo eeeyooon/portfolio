@@ -5,9 +5,10 @@ import { useRef } from "react";
 
 type Props = {
   projects: Project[];
+  onSelectProject: (projectPath: string) => void;
 };
 
-export default function ProjectGrid({ projects }: Props) {
+export default function ProjectGrid({ projects, onSelectProject }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const sortedProjects = projects.sort((a, b) =>
@@ -32,7 +33,7 @@ export default function ProjectGrid({ projects }: Props) {
           animate={isInView ? "visible" : "hidden"}
           transition={{ delay: index * 0.2, duration: 0.8, ease: "easeInOut" }}
         >
-          <ProjectCard project={project} />
+          <ProjectCard project={project} onSelectProject={onSelectProject} />
         </motion.li>
       ))}
     </ul>

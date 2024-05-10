@@ -13,7 +13,7 @@ export default async function ProjectsPage() {
         Projects
       </h2>
       <p className="text-center w-60 sm:w-auto md:w-auto lg:w-auto mx-auto font-scoreRegular text-sm sm:text-lg md:text-xl text-stone-700">
-        프로젝트를 클릭하면 해당 프로젝트의 상세 페이지로 이동합니다.
+        프로젝트를 클릭하면 해당 프로젝트의 상세 내용을 확인할 수 있습니다.
       </p>
       <FilterableProjects
         projects={projectDetailData}

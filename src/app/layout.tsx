@@ -19,6 +19,7 @@ export default function RootLayout({
         <Header />
         <main className="relative grow w-11/12 mx-auto md:w4/5">
           {children}
+          <div id="_modal"></div>
         </main>
         <Footer />
       </body>
