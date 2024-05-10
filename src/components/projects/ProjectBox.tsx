@@ -1,6 +1,6 @@
 "use client";
 
-import { Projects } from "@/types/projects";
+import { Projects } from "@/types/project";
 import Image from "next/image";
 import StackIcons from "./StackIcons";
 import ImageSlider from "./ImageSlider";

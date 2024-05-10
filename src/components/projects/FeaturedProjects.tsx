@@ -1,9 +1,11 @@
-import { projects } from "../../../data/projects/projectData";
+import { projectDetailData } from "./../../../data/projects/projectDetailData.ts/projectDetailData";
 import ProjectBox from "./ProjectBox";
 import Link from "next/link";
 
 export default function FeaturedProjectsPage() {
-  const featuredProject = projects.filter((project) => project.featured);
+  const featuredProject = projectDetailData.filter(
+    (project) => project.featured
+  );
   return (
     <section className="mt-10">
       <h2 className="font-dohyeon tracking-tight text-brown_color text-xl md:text-2xl mb-4">

@@ -1,8 +1,8 @@
-import { projects } from "../../../data/projects/projectData";
+import { projectDetailData } from "./../../../data/projects/projectDetailData.ts/projectDetailData";
 import FilterableProjects from "@/components/projects/FilterableProjects";
 export default async function ProjectsPage() {
   const categories = Array.from(
-    new Set(projects.flatMap((project) => project.category))
+    new Set(projectDetailData.flatMap((project) => project.category))
   ).sort();
   return (
     <section
@@ -15,7 +15,10 @@ export default async function ProjectsPage() {
       <p className="text-center w-60 sm:w-auto md:w-auto lg:w-auto mx-auto font-scoreRegular text-sm sm:text-lg md:text-xl text-stone-700">
         프로젝트를 클릭하면 해당 프로젝트의 상세 페이지로 이동합니다.
       </p>
-      <FilterableProjects projects={projects} categories={categories} />
+      <FilterableProjects
+        projects={projectDetailData}
+        categories={categories}
+      />
     </section>
   );
 }
