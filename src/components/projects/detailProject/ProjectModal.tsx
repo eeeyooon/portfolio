@@ -42,7 +42,9 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
           </p>
           <MainFeature project={project} />
           <ProjectSection project={project} section="contribution" />
-          <ProjectSection project={project} section="troubleShooting" />
+          {project.troubleShooting && (
+            <ProjectSection project={project} section="troubleShooting" />
+          )}
         </ModalContainer>
       </ModalWrapper>
     </ModalPortal>
@@ -60,17 +62,18 @@ const ModalContainer = tw.section`
   inset-y-0
   z-40
   bg-white
-  py-10
-  px-40
-  max-md:px-10
-  max-md:py-4
+  px-6
+  py-4
+  sm:px-14
+  md:px-36
+  md:py-4
   drop-shadow-xl
   border
   border-stone-100
   rounded-xl
   w-11/12
   sm:w-10/12
-  md:w-4/5
+  md:w-10/12
   h-full
   overflow-y-auto
   scrollbar-hide

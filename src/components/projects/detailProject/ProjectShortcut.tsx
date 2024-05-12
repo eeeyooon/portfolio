@@ -21,7 +21,7 @@ export default function ProjectShortcut({
   },
 }: ProjectShortcutProps) {
   return (
-    <summary className="flex flex-col items-center">
+    <summary className="flex flex-col items-center mt-10">
       <h3 className="text-xl md:text-2xl font-semibold font-scoreRegular mt-5">
         {title}
       </h3>
@@ -34,7 +34,7 @@ export default function ProjectShortcut({
           <StackIcons key={stack} stack={stack} />
         ))}
       </div>
-      <p className="text-md md:text-lg text-center w-auto sm:w-10/12 md:w-9/12 mb-10">
+      <p className="text-md md:text-lg text-center w-auto sm:w-11/12 md:w-9/12 mb-10">
         {description}
       </p>
       <div className="flex flex-col  md:flex-row items-center gap-2 justify-center md:gap-8  text-sm md:text-base text-stone-600">
