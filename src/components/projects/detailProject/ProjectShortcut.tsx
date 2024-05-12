@@ -22,7 +22,9 @@ export default function ProjectShortcut({
 }: ProjectShortcutProps) {
   return (
     <summary className="flex flex-col items-center">
-      <h3 className="text-xl md:text-2xl font-scoreRegular mt-5">{title}</h3>
+      <h3 className="text-xl md:text-2xl font-semibold font-scoreRegular mt-5">
+        {title}
+      </h3>
       <div className="my-2 text-stone-500">
         <span>{startDate} ~ </span>
         <span>{endDate}</span>
@@ -32,7 +34,7 @@ export default function ProjectShortcut({
           <StackIcons key={stack} stack={stack} />
         ))}
       </div>
-      <p className="text-center w-auto sm:w-10/12 md:w-9/12 mb-10">
+      <p className="text-md md:text-lg text-center w-auto sm:w-10/12 md:w-9/12 mb-10">
         {description}
       </p>
       <div className="flex flex-col  md:flex-row items-center gap-2 justify-center md:gap-8  text-sm md:text-base text-stone-600">
@@ -59,7 +61,7 @@ export default function ProjectShortcut({
           <span className="ml-3">서비스 바로가기</span>
         </Link>
       </div>
-      <div className="w-full h-[1px] bg-stone-300 mt-16"></div>
+      <div className="w-full h-[1px] bg-stone-300 mt-10 md:mt-14"></div>
     </summary>
   );
 }

@@ -1,3 +1,4 @@
+import MarkdownBox from "@/components/markdown/MarkdownBox";
 import { Project } from "@/types/project";
 import Image from "next/image";
 
@@ -6,8 +7,7 @@ type MainFeatureProps = {
 };
 
 export default function MainFeature({ project }: MainFeatureProps) {
-  const { category, points } = project;
-  const projectType = category.includes("Team");
+  const { points } = project;
   return (
     <section>
       <h4 className="text-lg md:text-xl font-semibold md:font-bold mb-5 flex flex-row gap-2">
@@ -27,7 +27,7 @@ export default function MainFeature({ project }: MainFeatureProps) {
             key={`${project}${idx}`}
             className="list-disc ml-4 marker:text-blue_color text-base md:text-lg my-1"
           >
-            {point}
+            <MarkdownBox>{point}</MarkdownBox>
           </li>
         ))}
       </ul>

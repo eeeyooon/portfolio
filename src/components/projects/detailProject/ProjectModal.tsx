@@ -37,7 +37,7 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
         <ModalContainer onClick={stopPropagation}>
           <button onClick={onClose}>close</button>
           <ProjectShortcut project={project} />
-          <p className="text-2xl font-semibold md:font-bold md:text-3xl mb-12 mt-20">
+          <p className="text-2xl font-semibold md:font-bold md:text-3xl mb-8 md:mb-12 mt-10 md:mt-12">
             {projectType ? "팀 프로젝트" : "개인 프로젝트"}
           </p>
           <MainFeature project={project} />
@@ -67,7 +67,9 @@ const ModalContainer = tw.section`
   border
   border-stone-100
   rounded-xl
-  w-4/5
+  w-11/12
+  sm:w-10/12
+  md:w-4/5
   h-full
   overflow-y-auto
   scrollbar-hide
