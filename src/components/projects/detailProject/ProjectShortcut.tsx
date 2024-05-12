@@ -21,7 +21,7 @@ export default function ProjectShortcut({
   },
 }: ProjectShortcutProps) {
   return (
-    <article className="flex flex-col items-center">
+    <summary className="flex flex-col items-center">
       <h3 className="text-xl md:text-2xl font-scoreRegular mt-5">{title}</h3>
       <div className="my-2 text-stone-500">
         <span>{startDate} ~ </span>
@@ -60,6 +60,6 @@ export default function ProjectShortcut({
         </Link>
       </div>
       <div className="w-full h-[1px] bg-stone-300 mt-16"></div>
-    </article>
+    </summary>
   );
 }
