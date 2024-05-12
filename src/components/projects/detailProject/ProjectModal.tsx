@@ -3,7 +3,7 @@ import ProjectShortcut from "./ProjectShortcut";
 import ModalPortal from "../../common/ModalPortal";
 import { projectDetailData } from "../../../../data/projects/projectDetailData.ts/projectDetailData";
 import MainFeature from "./MainFeature";
-import ProjectContribution from "./ProjectContribution";
+import ProjectSection from "./ProjectSection";
 
 type Props = {
   projectPath: string;
@@ -41,7 +41,8 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
             {projectType ? "팀 프로젝트" : "개인 프로젝트"}
           </p>
           <MainFeature project={project} />
-          <ProjectContribution project={project} />
+          <ProjectSection project={project} section="contribution" />
+          <ProjectSection project={project} section="troubleShooting" />
         </ModalContainer>
       </ModalWrapper>
     </ModalPortal>

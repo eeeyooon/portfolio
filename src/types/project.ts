@@ -7,6 +7,10 @@ export type Project = {
     detail?: string[];
     title: string;
   }[];
+  troubleShooting?: {
+    detail?: string[];
+    title: string;
+  }[];
   startDate: string;
   endDate: string;
   category: string[];

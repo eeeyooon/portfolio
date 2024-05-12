@@ -10,7 +10,6 @@ type DetailContentProps = {
 };
 
 export default function DetailContent({ contentList }: DetailContentProps) {
-  console.log(contentList);
   return (
     <ul className="text-base md:text-lg">
       {contentList.map((item, idx) => (
