@@ -1,8 +1,8 @@
 import tw from "tailwind-styled-components";
 import ProjectShortcut from "./ProjectShortcut";
-import { project9 } from "../../../data/projects/projectDetailData.ts/project9";
-import ModalPortal from "../common/ModalPortal";
-import { projectDetailData } from "../../../data/projects/projectDetailData.ts/projectDetailData";
+import { project9 } from "../../../../data/projects/projectDetailData.ts/project9";
+import ModalPortal from "../../common/ModalPortal";
+import { projectDetailData } from "../../../../data/projects/projectDetailData.ts/projectDetailData";
 
 type Props = {
   projectPath: string;

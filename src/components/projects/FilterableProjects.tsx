@@ -4,7 +4,7 @@ import { Project } from "@/types/project";
 import { useState } from "react";
 import ProjectGrid from "./ProjectGrid";
 import Categories from "./Categories";
-import ProjectModal from "./ProjectModal";
+import ProjectModal from "./detailProject/ProjectModal";
 
 type Props = {
   projects: Project[];
