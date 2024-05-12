@@ -14,6 +14,7 @@ export default function Categories({ categories, selected, onClick }: Props) {
         priority
         width={18}
         height={18}
+        style={{ width: 18, height: 18 }}
       />
       <ul className="ml-2 flex justify-center items-center mx-auto w-full rounded-3xl">
         {categories.map((category) => (

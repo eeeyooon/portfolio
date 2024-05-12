@@ -1,8 +1,8 @@
 import tw from "tailwind-styled-components";
 import ProjectShortcut from "./ProjectShortcut";
-import { project9 } from "../../../../data/projects/projectDetailData.ts/project9";
 import ModalPortal from "../../common/ModalPortal";
 import { projectDetailData } from "../../../../data/projects/projectDetailData.ts/projectDetailData";
+import MainFeature from "./MainFeature";
 
 type Props = {
   projectPath: string;
@@ -31,7 +31,7 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
         <ModalContainer onClick={stopPropagation}>
           <button onClick={onClose}>close</button>
           <ProjectShortcut project={project} />
-          <div className="bg-stone-300 h-96 mt-4">teststest</div>
+          <MainFeature project={project} />
         </ModalContainer>
       </ModalWrapper>
     </ModalPortal>
