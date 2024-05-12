@@ -20,8 +20,6 @@ export default function FilterableProjects({ projects, categories }: Props) {
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  console.log(selectedProjectPath);
-
   const filtered =
     selected === ALL_PROJECTS
       ? projects
