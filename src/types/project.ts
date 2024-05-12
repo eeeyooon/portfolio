@@ -3,6 +3,10 @@ export type Project = {
   intro: string;
   description: string;
   points: string[];
+  contribution?: {
+    detail?: string[];
+    title: string;
+  }[];
   startDate: string;
   endDate: string;
   category: string[];
