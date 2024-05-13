@@ -119,7 +119,12 @@ export default function AboutPage() {
                 <span>I find joy in</span>
                 <span> what I do.</span>
               </motion.p>
-              <div className="w-60 h-72 md:w-[22rem] md:h-auto overflow-hidden block rounded-xl">
+              <div
+                className="w-60 h-72 md:w-[22rem] md:h-auto overflow-hidden block rounded-xl"
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                }}
+              >
                 <Image
                   src={ProfileImage}
                   alt="Picture of the author"
