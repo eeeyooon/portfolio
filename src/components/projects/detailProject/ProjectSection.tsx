@@ -34,7 +34,7 @@ export default function ProjectSection({
   const sectionData = project[section];
 
   return (
-    <section className="mt-12">
+    <section className="mt-16">
       <h4 className="text-lg md:text-xl font-semibold md:font-bold mb-5 flex flex-row gap-2">
         <Image
           src={iconSrc}

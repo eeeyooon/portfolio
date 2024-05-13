@@ -36,7 +36,7 @@ export default function FilterableProjects({ projects, categories }: Props) {
   };
 
   return (
-    <section className="flex m-4 flex-col">
+    <section className="flex m-4 flex-col ">
       <div className="flex items-start">
         <Categories
           categories={[ALL_PROJECTS, ...categories]}
@@ -44,7 +44,7 @@ export default function FilterableProjects({ projects, categories }: Props) {
           onClick={setSelected}
         />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center relative">
         <ProjectGrid
           projects={filtered}
           onSelectProject={handleSelectProject}

@@ -5,6 +5,7 @@ import { projectDetailData } from "../../../../data/projects/projectDetailData.t
 import MainFeature from "./MainFeature";
 import ProjectSection from "./ProjectSection";
 import ProjectImage from "./ProjectImage";
+import Image from "next/image";
 
 type Props = {
   projectPath: string;
@@ -33,26 +34,37 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
   };
 
   return (
-    <ModalPortal>
-      <ModalWrapper onClick={onClose}>
-        <ModalContainer onClick={stopPropagation}>
-          <button onClick={onClose}>close</button>
-          <ProjectShortcut project={project} />
-          <p className="text-2xl font-semibold md:font-bold md:text-3xl mb-8 md:mb-12 mt-10 md:mt-12">
-            {projectType ? "팀 프로젝트" : "개인 프로젝트"}
-          </p>
-          <MainFeature project={project} />
-          <ProjectSection project={project} section="contribution" />
-          {project.troubleShooting && (
-            <ProjectSection project={project} section="troubleShooting" />
-          )}
-          {project.review && (
-            <ProjectSection project={project} section="review" />
-          )}
-          <ProjectImage project={project} />
-        </ModalContainer>
-      </ModalWrapper>
-    </ModalPortal>
+    <>
+      <div className="fixed top-10 right-7 sm:right-28 md:right-12 z-[80] bg-white rounded-full w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 overflow-hidden">
+        <button onClick={onClose}>
+          <Image
+            src="/images/icons/icon-close-darkgray.svg"
+            width={48}
+            height={48}
+            alt="닫기 아이콘"
+          />
+        </button>
+      </div>
+      <ModalPortal>
+        <ModalWrapper onClick={onClose}>
+          <ModalContainer onClick={stopPropagation}>
+            <ProjectShortcut project={project} />
+            <p className="text-2xl font-semibold md:font-bold md:text-3xl mb-8 md:mb-12 mt-10 md:mt-12">
+              {projectType ? "팀 프로젝트" : "개인 프로젝트"}
+            </p>
+            <MainFeature project={project} />
+            <ProjectSection project={project} section="contribution" />
+            {project.troubleShooting && (
+              <ProjectSection project={project} section="troubleShooting" />
+            )}
+            {project.review && (
+              <ProjectSection project={project} section="review" />
+            )}
+            <ProjectImage project={project} />
+          </ModalContainer>
+        </ModalWrapper>
+      </ModalPortal>
+    </>
   );
 }
 
