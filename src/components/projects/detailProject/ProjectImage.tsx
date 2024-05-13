@@ -14,7 +14,7 @@ export default function ProjectImage({ project }: ProjectImageProp) {
       projectImages.push(
         <div
           key={`${title} + ${i}`}
-          className="relative w-[38vw] h-[25vw] sm:w-[22vw] sm:h-[15vw] md:w-[18vw] md:h-[15vw]
+          className="relative w-[38vw] h-[25vw] sm:w-[22vw] sm:h-[15vw] md:w-[18vw] md:h-[13vw]
     "
         >
           <Image
@@ -45,7 +45,7 @@ export default function ProjectImage({ project }: ProjectImageProp) {
         />
         <span>작업 화면</span>
       </h4>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center px-0 lg:px-10">
         {renderImages()}
       </div>
     </section>

@@ -17,6 +17,6 @@ export const projectDetailData: Project[] = [
   // project5,
   // project6,
   // project7,
-  // project8,
+  project8,
   project9,
 ];
