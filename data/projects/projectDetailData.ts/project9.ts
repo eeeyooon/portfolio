@@ -62,6 +62,32 @@ export const project9 = {
       title: "트러블 슈팅 내용 4",
     },
   ],
+  review: [
+    {
+      title: "리뷰 1",
+      detail: [
+        `react-slick 라이브러리를 사용하여 이미지 슬라이더 기능을
+      구현하였습니다.`,
+        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
+      구현하였습니다.`,
+      ],
+    },
+    {
+      title: "리뷰 2",
+      detail: [
+        `\`react-slick\` 라이브러리를 사용하여 이미지 슬라이더 기능을
+      구현하였습니다.`,
+        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
+      구현하였습니다.`,
+      ],
+    },
+    {
+      title: "리뷰 3",
+    },
+    {
+      title: "리뷰 4",
+    },
+  ],
   startDate: "2023-11-09",
   endDate: "2024-02-10",
   category: ["Personal", "Featured"],
@@ -71,5 +97,5 @@ export const project9 = {
   githubUrl: "https://github.com/eeeyooon/portfolio",
   docsUrl: "",
   serviceUrl: "https://portfolio-eeeyooon.vercel.app/",
-  images: 1,
+  images: 3,
 };

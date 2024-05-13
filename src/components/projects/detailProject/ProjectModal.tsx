@@ -4,6 +4,7 @@ import ModalPortal from "../../common/ModalPortal";
 import { projectDetailData } from "../../../../data/projects/projectDetailData.ts/projectDetailData";
 import MainFeature from "./MainFeature";
 import ProjectSection from "./ProjectSection";
+import ProjectImage from "./ProjectImage";
 
 type Props = {
   projectPath: string;
@@ -45,6 +46,10 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
           {project.troubleShooting && (
             <ProjectSection project={project} section="troubleShooting" />
           )}
+          {project.review && (
+            <ProjectSection project={project} section="review" />
+          )}
+          <ProjectImage project={project} />
         </ModalContainer>
       </ModalWrapper>
     </ModalPortal>

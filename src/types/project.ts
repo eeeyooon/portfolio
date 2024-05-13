@@ -11,6 +11,10 @@ export type Project = {
     detail?: string[];
     title: string;
   }[];
+  review?: {
+    detail?: string[];
+    title: string;
+  }[];
   startDate: string;
   endDate: string;
   category: string[];
