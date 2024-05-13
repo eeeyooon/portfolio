@@ -7,7 +7,7 @@ export default async function ProjectsPage() {
   return (
     <section
       id="projects"
-      className="h-full pt-12 mb-4 selection:bg-blue_color"
+      className="h-full pt-12 mb-4 selection:bg-blueLight_color"
     >
       <h2 className="text-center font-dohyeon text-blue_color text-xl md:text-3xl mb-6 selection:bg-brown_color">
         Projects

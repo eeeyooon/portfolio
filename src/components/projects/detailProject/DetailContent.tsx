@@ -15,7 +15,7 @@ export default function DetailContent({ contentList }: DetailContentProps) {
       {contentList.map((item, idx) => (
         <li key={`${item.title}-${idx}`}>
           <dl>
-            <dt className="bg-stone-200 p-2 pl-4 mb-2 font-semibold">
+            <dt className="bg-stone-200 p-2 pl-4 mb-2 font-semibold selection:bg-stone-400">
               {item.title}
             </dt>
             {item.detail?.map((detailItem, idx) => (

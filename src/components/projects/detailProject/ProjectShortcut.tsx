@@ -25,11 +25,11 @@ export default function ProjectShortcut({
       <h3 className="text-xl md:text-2xl font-semibold font-scoreRegular mt-5">
         {title}
       </h3>
-      <div className="my-2 text-stone-500">
+      <div className="my-2 text-stone-500 selection:bg-stone-300">
         <span>{startDate} ~ </span>
         <span>{endDate}</span>
       </div>
-      <div className="flex flex-row items-center md:justify-start justify-center text-gray-700 mt-2 mb-6 ">
+      <div className="flex flex-row items-center md:justify-start justify-center text-gray-700 mt-2 mb-6 selection:bg-stone-300">
         {stacks.map((stack) => (
           <StackIcons key={stack} stack={stack} />
         ))}
@@ -37,7 +37,7 @@ export default function ProjectShortcut({
       <p className="text-md md:text-lg text-center w-auto sm:w-11/12 md:w-9/12 mb-10">
         {description}
       </p>
-      <div className="flex flex-col  md:flex-row items-center gap-2 justify-center md:gap-8  text-sm md:text-base text-stone-600">
+      <div className="flex flex-col  md:flex-row items-center gap-2 justify-center md:gap-8  text-sm md:text-base text-stone-600 selection:bg-stone-300">
         <Link
           href={githubUrl}
           target="_blank"

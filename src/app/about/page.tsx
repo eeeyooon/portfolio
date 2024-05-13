@@ -91,7 +91,7 @@ export default function AboutPage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.6 }}
             >
-              즐거움을 찾는 개발자 <span className="font-bold">강지윤</span>
+              프론트엔드 개발자 <span className="font-bold">강지윤</span>
               입니다.
             </motion.span>
           </motion.div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
-              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-stone-600 w-full justify-center">
+              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 mb-10 text-stone-600 w-full justify-center selection:bg-stone-300">
                 <Link
                   href="https://github.com/eeeyooon"
                   target="_blank"

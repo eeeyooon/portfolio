@@ -55,6 +55,7 @@ const ModalWrapper = tw.div`
 fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center items-center bg-black bg-opacity-60 z-40 
 overflow-y-auto
 scrollbar-hide
+selection:bg-blueLight_color
 `;
 
 const ModalContainer = tw.section`

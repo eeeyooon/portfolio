@@ -33,7 +33,7 @@ export default function Header() {
   const linkIsActive = (route: string) => activeLink === route;
 
   return (
-    <header className="flex flex-col justify-between items-center mx-auto w-full px-8 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-30 pb-[3px] selection:bg-brown_color">
+    <header className="flex flex-col justify-between items-center mx-auto w-full px-8 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-30 pb-[3px] selection:bg-blueLight_color">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
         <Link href="/">
           <span className="text-2xl font-light font-shrik text-blue_color pl-2">

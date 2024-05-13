@@ -27,6 +27,7 @@ const config: Config = {
         primary: "#ffffff",
         red_color: "#EF7373",
         blue_color: "#4561B7",
+        blueLight_color: "#7792E5",
         yellow_color: "#FFC267",
         brown_color: "#DEAF8E",
         redbrown_color: "#A52A2A",
