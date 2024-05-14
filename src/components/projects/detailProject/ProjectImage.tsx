@@ -3,10 +3,21 @@ import Image from "next/image";
 
 type ProjectImageProp = {
   project: Project;
+  selectImage: (imageSrc: string) => void;
+  onOpenViewer: () => void;
 };
 
-export default function ProjectImage({ project }: ProjectImageProp) {
+export default function ProjectImage({
+  project,
+  selectImage,
+  onOpenViewer,
+}: ProjectImageProp) {
   const { title, path, images } = project;
+
+  const openImageViewer = (imageSrc: string) => {
+    onOpenViewer();
+    selectImage(imageSrc);
+  };
 
   const renderImages = () => {
     let projectImages = [];
@@ -14,12 +25,14 @@ export default function ProjectImage({ project }: ProjectImageProp) {
       projectImages.push(
         <div
           key={`${title} + ${i}`}
+          onClick={() => openImageViewer(`${path}${i + 1}`)}
           className="relative w-[38vw] h-[25vw] sm:w-[22vw] sm:h-[15vw] md:w-[18vw] md:h-[13vw]
     "
         >
           <Image
             className="object-cover w-full h-full overflow-hidden absolute rounded-lg border-stone-300 border-[1px]"
             src={`/images/projects/${path}${i > 0 ? i + 1 : ""}.png`}
+            id={`${path}${i}`}
             alt={`${title} 이미지 ${i + 1}`}
             quality={100}
             fill={true}
@@ -34,7 +47,7 @@ export default function ProjectImage({ project }: ProjectImageProp) {
 
   return (
     <section className="mt-12 mb-10">
-      <h4 className="text-lg md:text-xl font-semibold md:font-bold mb-5 flex flex-row gap-2">
+      <h4 className="text-lg md:text-xl font-semibold md:font-bold mb-2 flex flex-row gap-2">
         <Image
           src="/images/icons/icon-monitor.png"
           alt="화면 아이콘"
@@ -45,7 +58,10 @@ export default function ProjectImage({ project }: ProjectImageProp) {
         />
         <span>작업 화면</span>
       </h4>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center px-0 lg:px-10">
+      <p className="mb-5 text-md md:text-lg text-stone-500">
+        이미지를 클릭하면 크게 볼 수 있습니다.
+      </p>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center px-0">
         {renderImages()}
       </div>
     </section>

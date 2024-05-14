@@ -5,6 +5,8 @@ import { useState } from "react";
 import ProjectGrid from "./ProjectGrid";
 import Categories from "./Categories";
 import ProjectModal from "./detailProject/ProjectModal";
+import ImageViewer from "./detailProject/ImageViewer";
+import useModal from "@/hooks/useModal";
 
 type Props = {
   projects: Project[];
@@ -15,24 +17,34 @@ const ALL_PROJECTS = "All";
 
 export default function FilterableProjects({ projects, categories }: Props) {
   const [selected, setSelected] = useState(ALL_PROJECTS);
-  const [selectedProjectPath, setSelectedProjectPath] = useState<string | null>(
-    null
-  );
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filtered =
     selected === ALL_PROJECTS
       ? projects
       : projects.filter((project) => project.category.includes(selected));
 
+  const {
+    isOpen: isModalOpen,
+    selectedItem: selectedProjectPath,
+    openModal: openProjectModal,
+    closeModal: closeProjectModal,
+  } = useModal<string>();
+
+  const {
+    isOpen: isImageViewerOpen,
+    selectedItem: selectedImage,
+    openModal: openImageViewer,
+    closeModal: closeImageViewer,
+  } = useModal<string>();
+
   const handleSelectProject = (path: string) => {
-    setSelectedProjectPath(path);
-    setIsModalOpen(true);
+    openProjectModal(path);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedProjectPath(null);
+  const handleOpenViewer = () => {
+    if (selectedImage) {
+      openImageViewer(selectedImage);
+    }
   };
 
   return (
@@ -52,8 +64,13 @@ export default function FilterableProjects({ projects, categories }: Props) {
         {isModalOpen && selectedProjectPath && (
           <ProjectModal
             projectPath={selectedProjectPath}
-            onClose={handleCloseModal}
+            onClose={closeProjectModal}
+            selectImage={openImageViewer}
+            onOpenViewer={handleOpenViewer}
           />
+        )}
+        {isImageViewerOpen && selectedImage && (
+          <ImageViewer imageSrc={selectedImage} onClose={closeImageViewer} />
         )}
       </div>
     </section>

@@ -23,6 +23,7 @@ export default function ProjectCard({
             src={`/images/projects/${path}.png`}
             alt={title}
             fill={true}
+            sizes="(max-width: 768px) 75vw, (max-width: 1200px) 30vw, 22vw"
           />
         </div>
       </div>

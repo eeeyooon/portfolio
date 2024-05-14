@@ -10,9 +10,16 @@ import Image from "next/image";
 type Props = {
   projectPath: string;
   onClose: () => void;
+  selectImage: (imageSrc: string) => void;
+  onOpenViewer: () => void;
 };
 
-export default function ProjectModal({ projectPath, onClose }: Props) {
+export default function ProjectModal({
+  projectPath,
+  onClose,
+  selectImage,
+  onOpenViewer,
+}: Props) {
   const project = projectDetailData.find(
     (project) => project.path === projectPath
   );
@@ -60,7 +67,11 @@ export default function ProjectModal({ projectPath, onClose }: Props) {
             {project.review && (
               <ProjectSection project={project} section="review" />
             )}
-            <ProjectImage project={project} />
+            <ProjectImage
+              onOpenViewer={onOpenViewer}
+              selectImage={selectImage}
+              project={project}
+            />
           </ModalContainer>
         </ModalWrapper>
       </ModalPortal>
