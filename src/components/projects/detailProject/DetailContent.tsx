@@ -21,7 +21,7 @@ export default function DetailContent({ contentList }: DetailContentProps) {
             {item.detail?.map((detailItem, idx) => (
               <dd
                 key={`${detailItem}-${idx}`}
-                className="list-item list-disc ml-6 marker:text-blue_color my-1 last:mb-4"
+                className="list-item list-disc ml-6 marker:text-blue_color my-[6px] last:mb-8"
               >
                 <MarkdownBox>{detailItem}</MarkdownBox>
               </dd>
