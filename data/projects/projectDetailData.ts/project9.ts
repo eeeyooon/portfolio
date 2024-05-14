@@ -10,86 +10,8 @@ export const project9 = {
     "다양한 기기나 화면의 크기에 따라 자동으로 맞춤 렌더링이 되도록 반응형 웹 디자인을 구현함.",
     "Header의 메뉴를 클릭하거나 화살표 버튼을 통한 스크롤 이동을 구현하여 편리한 탐색이 가능함.",
   ],
-  contribution: [
-    {
-      title: "프로젝트 이미지 슬라이더 기능 구현",
-      detail: [
-        `react-slick 라이브러리를 사용하여 이미지 슬라이더 기능을
-      구현하였습니다.`,
-        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
-      구현하였습니다.`,
-      ],
-    },
-    {
-      title: "프로젝트 이미지 슬라이더 기능 구현2",
-      detail: [
-        `\`react-slick\` 라이브러리를 사용하여 이미지 슬라이더 기능을
-      구현하였습니다.`,
-        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
-      구현하였습니다.`,
-      ],
-    },
-    {
-      title: "프로젝트 이미지 슬라이더 기능 구현3",
-    },
-    {
-      title: "프로젝트 이미지 슬라이더 기능 구현4",
-    },
-  ],
-  troubleShooting: [
-    {
-      title: "트러블 슈팅 내용 1",
-      detail: [
-        `react-slick 라이브러리를 사용하여 이미지 슬라이더 기능을
-      구현하였습니다.`,
-        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
-      구현하였습니다.`,
-      ],
-    },
-    {
-      title: "트러블 슈팅 내용 2",
-      detail: [
-        `\`react-slick\` 라이브러리를 사용하여 이미지 슬라이더 기능을
-      구현하였습니다.`,
-        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
-      구현하였습니다.`,
-      ],
-    },
-    {
-      title: "트러블 슈팅 내용 3",
-    },
-    {
-      title: "트러블 슈팅 내용 4",
-    },
-  ],
-  review: [
-    {
-      title: "리뷰 1",
-      detail: [
-        `react-slick 라이브러리를 사용하여 이미지 슬라이더 기능을
-      구현하였습니다.`,
-        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
-      구현하였습니다.`,
-      ],
-    },
-    {
-      title: "리뷰 2",
-      detail: [
-        `\`react-slick\` 라이브러리를 사용하여 이미지 슬라이더 기능을
-      구현하였습니다.`,
-        `react-slick 라이브러리를 사용하여 **이미지 슬라이더 기능**을
-      구현하였습니다.`,
-      ],
-    },
-    {
-      title: "리뷰 3",
-    },
-    {
-      title: "리뷰 4",
-    },
-  ],
   startDate: "2023-11-09",
-  endDate: "2024-02-10",
+  endDate: "진행중",
   category: ["Personal", "Featured"],
   path: "portfolio-site",
   featured: true,
@@ -97,5 +19,5 @@ export const project9 = {
   githubUrl: "https://github.com/eeeyooon/portfolio",
   docsUrl: "",
   serviceUrl: "https://portfolio-eeeyooon.vercel.app/",
-  images: 3,
+  images: 4,
 };

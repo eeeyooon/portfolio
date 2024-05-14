@@ -35,7 +35,7 @@ export const project1 = {
     },
   ],
   startDate: "2023-12-02",
-  endDate: "2023-12-11",
+  endDate: "2023-12-11 (10일)",
   category: ["Personal"],
   path: "google-form",
   featured: true,

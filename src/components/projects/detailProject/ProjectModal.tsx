@@ -60,7 +60,9 @@ export default function ProjectModal({
               {projectType ? "팀 프로젝트" : "개인 프로젝트"}
             </p>
             <MainFeature project={project} />
-            <ProjectSection project={project} section="contribution" />
+            {project.contribution && (
+              <ProjectSection project={project} section="contribution" />
+            )}
             {project.troubleShooting && (
               <ProjectSection project={project} section="troubleShooting" />
             )}
