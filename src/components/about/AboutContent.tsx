@@ -11,7 +11,7 @@ export default function AboutContent() {
       <p className="text-sm sm:text-base lg:text-lg md:text-lg ">
         함께 일하는 동료에게도, 같이 일하면 즐거운 사람이고 싶어요.
       </p>
-      <p className="text-sm sm:text-base lg:text-lg md:text-lg ">
+      <p className="text-sm sm:text-base lg:text-lg md:text-lg">
         나와 동료를 즐겁게 할 수 있는 DX도, 사용자를 즐겁게 할 수 있는 UX도
         고려하며 작업합니다.
       </p>
