@@ -61,7 +61,7 @@ export default function ProjectImage({
       <p className="mb-5 text-md md:text-lg text-stone-500">
         이미지를 클릭하면 크게 볼 수 있습니다.
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center px-0">
+      <div className="w-auto md:w-[60vw] grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center">
         {renderImages()}
       </div>
     </section>
