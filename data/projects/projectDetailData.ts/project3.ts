@@ -18,7 +18,7 @@ export const project3 = {
   category: ["Team", "Featured"],
   path: "jeju-brokerage",
   featured: true,
-  stacks: ["react", "styledComponents", "axios", "spring", "kakao"],
+  stacks: ["react", "styledComponents", "axios", "kakao"],
   githubUrl: "https://github.com/goormthon/frontend",
   docsUrl:
     "https://www.notion.so/eeeyooon/7436eeea62724ae1bbc26bce91980b50?pvs=4",

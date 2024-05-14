@@ -10,13 +10,13 @@ import { project8 } from "./project8";
 import { project9 } from "./project9";
 
 export const projectDetailData: Project[] = [
-  // project1,
-  // project2,
-  // project3,
-  // project4,
-  // project5,
-  // project6,
-  // project7,
+  project1,
+  project2,
+  project3,
+  project4,
+  project5,
+  project6,
+  project7,
   project8,
   project9,
 ];

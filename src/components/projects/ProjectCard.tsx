@@ -14,15 +14,18 @@ export default function ProjectCard({
   return (
     <article
       onClick={() => onSelectProject(path)}
-      className="rounded-md overflow-x-hidden shadow-lg hover:shadow-xl my-4 lg:transition duration-300 lg:transform lg:hover:scale-105 cursor-pointer"
+      className="rounded-md overflow-x-hidden shadow-lg hover:shadow-xl my-4 lg:transition duration-300 lg:transform lg:hover:scale-105 cursor-pointer flex flex-col"
     >
-      <Image
-        className="w-full h-[240px] object-contain"
-        src={`/images/projects/${path}.png`}
-        alt={title}
-        width={300}
-        height={200}
-      />
+      <div className="flex justify-center">
+        <div className="relative w-[75vw] h-[55vw] sm:w-[40vw] sm:h-[30vw] md:w-[22vw] md:h-[15vw] items-center">
+          <Image
+            className="object-cover w-full h-full overflow-hidden absolute"
+            src={`/images/projects/${path}.png`}
+            alt={title}
+            fill={true}
+          />
+        </div>
+      </div>
       <div className="flex flex-col items-start p-4">
         <div className="flex flex-row justify-between w-full items-center mb-1">
           <h3 className="text-base md:text-base font-bold ">{title}</h3>
