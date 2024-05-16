@@ -45,20 +45,22 @@ export default function ProjectShortcut({
           <IoLogoGithub className="w-5 h-5 md:w-6 md:h-6" />
           <span className="ml-3">깃허브 바로가기</span>
         </Link>
-        <Link
-          href={serviceUrl}
-          target="_blank"
-          className="flex flex-row items-center"
-        >
-          <Image
-            src="/images/icons/icon-link.png"
-            alt="링크 아이콘"
-            width={25}
-            height={25}
-            className="w-5 h-6 md:w-6 md:h-7"
-          />
-          <span className="ml-3">서비스 바로가기</span>
-        </Link>
+        {serviceUrl && (
+          <Link
+            href={serviceUrl}
+            target="_blank"
+            className="flex flex-row items-center"
+          >
+            <Image
+              src="/images/icons/icon-link.png"
+              alt="링크 아이콘"
+              width={25}
+              height={25}
+              className="w-5 h-6 md:w-6 md:h-7"
+            />
+            <span className="ml-3">서비스 바로가기</span>
+          </Link>
+        )}
       </div>
       <div className="w-full h-[1px] bg-stone-300 mt-10 md:mt-14"></div>
     </summary>

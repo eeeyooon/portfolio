@@ -102,7 +102,7 @@ export default function AboutPage() {
       </AnimatePresence>
       {!showInitialMessage && (
         <motion.section
-          className="h-full sm:h-screen"
+          className="h-full"
           variants={sectionVariants}
           initial="hidden"
           animate={controls}
