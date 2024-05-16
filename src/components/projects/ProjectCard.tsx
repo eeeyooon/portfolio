@@ -1,11 +1,13 @@
 import { Project } from "@/types/project";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import StackIcons from "./StackIcons";
 
 type Props = {
   project: Project;
   onSelectProject: (projectPath: string) => void;
 };
+
+const StackIcons = dynamic(() => import("./StackIcons"));
 
 export default function ProjectCard({
   project: { title, intro, startDate, endDate, category, path, stacks },

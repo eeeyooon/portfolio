@@ -1,6 +1,6 @@
 import { Project } from "@/types/project";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import DetailContent from "./DetailContent";
 
 const sectionConfig = {
   contribution: {
@@ -24,6 +24,8 @@ type ProjectSectionProps = {
   project: Project;
   section: "contribution" | "troubleShooting" | "review";
 };
+
+const DetailContent = dynamic(() => import("./DetailContent"));
 
 export default function ProjectSection({
   project,

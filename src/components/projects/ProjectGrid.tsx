@@ -1,12 +1,14 @@
 import { Project } from "@/types/project";
-import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 
 type Props = {
   projects: Project[];
   onSelectProject: (projectPath: string) => void;
 };
+
+const ProjectCard = dynamic(() => import("./ProjectCard"));
 
 export default function ProjectGrid({ projects, onSelectProject }: Props) {
   const ref = useRef(null);

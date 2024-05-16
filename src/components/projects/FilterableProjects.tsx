@@ -2,11 +2,10 @@
 
 import { Project } from "@/types/project";
 import { useState } from "react";
-import ProjectGrid from "./ProjectGrid";
 import Categories from "./Categories";
-import ProjectModal from "./detailProject/ProjectModal";
 import ImageViewer from "./detailProject/ImageViewer";
 import useModal from "@/hooks/useModal";
+import dynamic from "next/dynamic";
 
 type Props = {
   projects: Project[];
@@ -14,6 +13,9 @@ type Props = {
 };
 
 const ALL_PROJECTS = "All";
+
+const ProjectModal = dynamic(() => import("./detailProject/ProjectModal"));
+const ProjectGrid = dynamic(() => import("./ProjectGrid"));
 
 export default function FilterableProjects({ projects, categories }: Props) {
   const [selected, setSelected] = useState(ALL_PROJECTS);

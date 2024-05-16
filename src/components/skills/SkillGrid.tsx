@@ -1,13 +1,16 @@
 "use client";
 
 import { Skills } from "@/types/skills";
-import SkillCard from "./SkillCard";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 
 type Props = {
   skills: Skills[];
 };
+
+const SkillCard = dynamic(() => import("./SkillCard"));
+
 export default function SkillGrid({ skills }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref);

@@ -1,10 +1,12 @@
-import MarkdownBox from "@/components/markdown/MarkdownBox";
 import { Project } from "@/types/project";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 
 type MainFeatureProps = {
   project: Project;
 };
+
+const MarkdownBox = dynamic(() => import("@/components/markdown/MarkdownBox"));
 
 export default function MainFeature({ project }: MainFeatureProps) {
   const { points } = project;

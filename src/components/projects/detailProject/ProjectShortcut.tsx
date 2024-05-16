@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { project9 } from "../../../../data/projects/projectDetailData.ts/project9";
 import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io";
 import StackIcons from "../StackIcons";

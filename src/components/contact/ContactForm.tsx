@@ -1,14 +1,17 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useState } from "react";
-import ContactModal, { ContactModalData } from "./ContactModal";
+import { ContactModalData } from "./ContactModal";
 import { sendContactEmail } from "@/service/contact";
+import dynamic from "next/dynamic";
 
 type Form = {
   from: string;
   subject: string;
   message: string;
 };
+
+const ContactModal = dynamic(() => import("./ContactModal"));
 
 const DEFAULT_DATA = {
   from: "",

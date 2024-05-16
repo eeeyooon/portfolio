@@ -1,4 +1,4 @@
-import MarkdownBox from "@/components/markdown/MarkdownBox";
+import dynamic from "next/dynamic";
 
 type ContentListItem = {
   title: string;
@@ -8,6 +8,8 @@ type ContentListItem = {
 type DetailContentProps = {
   contentList: ContentListItem[];
 };
+
+const MarkdownBox = dynamic(() => import("@/components/markdown/MarkdownBox"));
 
 export default function DetailContent({ contentList }: DetailContentProps) {
   return (

@@ -1,11 +1,8 @@
 import tw from "tailwind-styled-components";
-import ProjectShortcut from "./ProjectShortcut";
 import ModalPortal from "../../common/ModalPortal";
 import { projectDetailData } from "../../../../data/projects/projectDetailData.ts/projectDetailData";
-import MainFeature from "./MainFeature";
-import ProjectSection from "./ProjectSection";
-import ProjectImage from "./ProjectImage";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 type Props = {
   projectPath: string;
@@ -13,6 +10,11 @@ type Props = {
   selectImage: (imageSrc: string) => void;
   onOpenViewer: () => void;
 };
+
+const ProjectShortcut = dynamic(() => import("./ProjectShortcut"));
+const MainFeature = dynamic(() => import("./MainFeature"));
+const ProjectSection = dynamic(() => import("./ProjectSection"));
+const ProjectImage = dynamic(() => import("./ProjectImage"));
 
 export default function ProjectModal({
   projectPath,

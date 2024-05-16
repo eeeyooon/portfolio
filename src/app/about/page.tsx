@@ -6,10 +6,12 @@ import { AnimatePresence, Variants, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import ProfileImage from "../../../public/images/profile.jpg";
 import { sentence } from "../../../data/about/aboutData";
-import AboutContent from "@/components/about/AboutContent";
-import SlotMachine from "@/components/about/SlotMachine";
 import useTypeword from "@/hooks/useTypeword";
-import ScrollDown from "@/components/common/ScrollDown";
+import dynamic from "next/dynamic";
+
+const SlotMachine = dynamic(() => import("@/components/about/SlotMachine"));
+const AboutContent = dynamic(() => import("@/components/about/AboutContent"));
+const ScrollDown = dynamic(() => import("@/components/common/ScrollDown"));
 
 export default function AboutPage() {
   const [showInitialMessage, setShowInitialMessage] = useState(true);
