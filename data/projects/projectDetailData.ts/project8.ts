@@ -16,7 +16,7 @@ export const project8 = {
   endDate: "2023-10-02",
   category: ["Personal", "Featured"],
   path: "emotion-diary",
-  featured: true,
+  featured: false,
   stacks: ["react", "firebase", "kakao"],
   githubUrl: "https://github.com/eeeyooon/Rebuild-EmotionDiary",
   docsUrl:
