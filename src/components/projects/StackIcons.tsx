@@ -11,6 +11,7 @@ export default function StackIcons({ stack }: Props) {
       priority
       width={20}
       height={20}
+      style={{ width: 20, height: 20 }}
     />
   );
 }
