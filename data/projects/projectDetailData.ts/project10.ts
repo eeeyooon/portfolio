@@ -17,7 +17,7 @@ export const project10 = {
       title:
         "로그인 성공 시 백엔드 서버로부터 JWT를 받아 NextJS API Routes를 활용하여 세션 관리를 하였습니다.",
       detail: [
-        "`Next.js API Routes`를 사용하여 RefreshToken을 서버사이드에서 `httpOnly 쿠키`로 안전하게 관리하고, AccessToken과 RefreshToken을 쿠키에 저장 및 삭제하는 로직을 작성했습니다.",
+        "`Next.js API Routes`를 사용하여 RefreshToken을 서버사이드에서 `httpOnly` 쿠키로 안전하게 관리하고, AccessToken과 RefreshToken을 쿠키에 저장 및 삭제하는 로직을 작성했습니다.",
         "API 통신 시 AccessToken을 헤더에 포함하여 보내도록 하고, AccessToken이 만료되었을 때는 RefreshToken을 사용해 새로운 AccessToken을 발급받는 자동화된 프로세스를 구현했습니다.",
         "`Next.js`의 서버사이드 렌더링과 클라이언트 사이드 렌더링을 고려하여 JWT 저장 위치와 접근 방법을 결정하였습니다.",
       ],
