@@ -2,20 +2,20 @@ export const project10 = {
   title: "WAVED",
   intro: "개발 직군 취업 준비생을 위한 챌린지 플랫폼",
   description:
-    "WAVED는 개발 직군 취업 준비생을 대상으로 챌린지를 제공하는 플랫폼입니다. 개발 직군 취업 준비에 도움이 될 수 있도록 맞춤형 챌린지를 제공합니다. 원하는 챌린지에 예치금을 걸고, 같은 챌린지를 신청한 참여자들끼리 답변을 공유하며 동기부여를 얻을 수 있도록 합니다. 6주간 기획부터 MVP 모델 출시까지 진행하였고, 4주 간 베타 테스트와 QA에 대응 후 공식 런칭하였습니다. 현재는 IT 교육기업인 (주) 멋쟁이 사자처럼의 서비스 라인에 탑재를 위한 인수인계 절차를 진행 중입니다.",
+    "WAVED는 개발 직군 취업 준비생을 대상으로 챌린지를 제공하는 플랫폼입니다. 개발 직군 취업 준비에 도움이 될 수 있도록 맞춤형 챌린지를 제공합니다. 원하는 챌린지에 예치금을 걸고, 같은 챌린지를 신청한 참여자들끼리 답변을 공유하며 동기부여를 얻을 수 있도록 합니다. \r\n 6주간 기획부터 MVP 모델 출시까지 진행하였고, 4주 간 베타 테스트와 QA에 대응 후 공식 런칭하였습니다. 현재는 IT 교육기업인 (주) 멋쟁이 사자처럼의 서비스 라인에 탑재를 위한 인수인계 절차를 진행 중입니다.",
   points: [
     `온보딩, 로그인 및 회원가입, 챌린지 신청 및 결제, 알림 기능, 프로필 페이지 및 관리자 페이지 등 화면 및 기능 개발`,
     `로그인 성공 시 백엔드 서버로부터 \`JWT\`를 받아 \`NextJS API Routes\`를 활용하여 \`Next\` 서버에서 세션 관리 `,
     `유저 인터랙션이 많은 페이지에선 \`CSR\`, 빠른 초기 로딩 및 SEO 최적화가 필요한 페이지에선 \`SSR\`을 선택하여 페이지마다 최적화된 렌더링 방식을 사용`,
     `\`Server-Sent Events\`를 연동하여 실시간 알림 기능 구현`,
-    `\`Axios Interceptors\`를 활용한 에러 핸들링 및 \`AccessToken\` 만료 시 새로운 \`AccessToken\`을 받을 수 있도록 기능 구현 - [[블로그 포스팅]](https://velog.io/@eeeyooon/Axios-%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81-%EB%B0%8F-AccessToken-%EB%A7%8C%EB%A3%8C-%EC%8B%9C-%EC%9E%AC%EB%B0%9C%EA%B8%89-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84)`,
+    `\`Axios Interceptors\`를 활용한 에러 핸들링 및 \`AccessToken\` 만료 시 새로운 \`AccessToken\`을 받을 수 있도록 기능 구현 - [**[블로그 포스팅]**](https://velog.io/@eeeyooon/Axios-%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81-%EB%B0%8F-AccessToken-%EB%A7%8C%EB%A3%8C-%EC%8B%9C-%EC%9E%AC%EB%B0%9C%EA%B8%89-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84)`,
     `포트원(구 아임포트)을 연동하여 NHN KCP 실결제 및 결제 후검증 기능 구현`,
     `\`Azure Web App\`과 \`GitHub Actions\`를 사용하여 코드 변경 시 자동으로 빌드, 테스트, 배포가 이루어지는 CI/CD 파이프라인 구축.`,
   ],
   contribution: [
     {
       title:
-        "로그인 성공 시 백엔드 서버로부터 JWT를 받아 NextJS API Routes를 활용하여 세션 관리를 하였습니다.",
+        "로그인 성공 시 백엔드 서버로부터 JWT를 받아 Next.js API Routes를 활용하여 세션 관리를 하였습니다.",
       detail: [
         "`Next.js API Routes`를 사용하여 RefreshToken을 서버사이드에서 `httpOnly` 쿠키로 안전하게 관리하고, AccessToken과 RefreshToken을 쿠키에 저장 및 삭제하는 로직을 작성했습니다.",
         "API 통신 시 AccessToken을 헤더에 포함하여 보내도록 하고, AccessToken이 만료되었을 때는 RefreshToken을 사용해 새로운 AccessToken을 발급받는 자동화된 프로세스를 구현했습니다.",
@@ -32,9 +32,9 @@ export const project10 = {
       ],
     },
     {
-      title: "SSE로 실시간 알림 기능을 구현하였습니다.",
+      title: "Server-Sent Events를 연동하여 실시간 알림 기능을 구현하였습니다.",
       detail: [
-        "`Server-Sent Events (SSE)`를 사용하여 서버에서 클라이언트로 실시간 알림을 전송하는 기능을 구현하였습니다.",
+        "사용자가 알림을 실시간으로 받을 수 있도록 `SSE`를 통해 서버와 클라이언트 간의 실시간 통신을 구현하였습니다.",
         "`EventSourcePolyfill`을 사용하여 유저 인증 토큰을 포함한 SSE 연결을 설정하였습니다.",
         "페이지 이동이나 새로고침 시에도 액세스 토큰을 재발급하고 SSE를 재연동하도록 처리하였습니다.",
       ],

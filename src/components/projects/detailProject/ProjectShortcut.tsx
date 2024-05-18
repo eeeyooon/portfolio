@@ -33,7 +33,7 @@ export default function ProjectShortcut({
           <StackIcons key={stack} stack={stack} />
         ))}
       </div>
-      <p className="text-md md:text-lg text-center w-auto sm:w-11/12 md:w-9/12 mb-10">
+      <p className="text-md md:text-lg text-center w-auto sm:w-11/12 md:w-11/12 mb-10 whitespace-pre-wrap">
         {description}
       </p>
       <div className="flex flex-col  md:flex-row items-center gap-2 justify-center md:gap-8  text-sm md:text-base text-stone-600 selection:bg-stone-300">
@@ -62,7 +62,7 @@ export default function ProjectShortcut({
           </Link>
         )}
       </div>
-      <div className="w-full h-[1px] bg-stone-300 mt-10 md:mt-14"></div>
+      <div className="w-full h-[1px] bg-stone-300 mt-10 md:mt-14" />
     </summary>
   );
 }
