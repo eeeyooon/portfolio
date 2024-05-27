@@ -9,6 +9,7 @@ export default function StackIcons({ stack }: Props) {
       src={`/images/icons/${stack}.svg`}
       alt={stack}
       priority
+      quality={100}
       width={20}
       height={20}
       style={{ width: 20, height: 20 }}

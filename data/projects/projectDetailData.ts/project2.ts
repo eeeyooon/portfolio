@@ -15,7 +15,7 @@ export const project2 = {
   endDate: "2023-12-11",
   category: ["Personal"],
   path: "minesweeper-game",
-  featured: true,
+  featured: false,
   stacks: ["react", "styledComponents", "typescript", "redux", "vercel"],
   githubUrl: "https://github.com/eeeyooon/minesweeper-game",
   docsUrl: "",
