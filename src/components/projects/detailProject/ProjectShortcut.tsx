@@ -3,13 +3,19 @@ import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io";
 import StackIcons from "../StackIcons";
 import { Project } from "@/types/project";
+import findProject from "@/service/findProject";
 
 type ProjectShortcutProps = {
-  project: Project;
+  projectPath: string;
 };
+export default function ProjectShortcut({ projectPath }: ProjectShortcutProps) {
+  const project: Project | undefined = findProject(projectPath);
 
-export default function ProjectShortcut({
-  project: {
+  if (!project) {
+    return null;
+  }
+
+  const {
     title,
     description,
     stacks,
@@ -17,8 +23,8 @@ export default function ProjectShortcut({
     endDate,
     githubUrl,
     serviceUrl,
-  },
-}: ProjectShortcutProps) {
+  } = project;
+
   return (
     <summary className="flex flex-col items-center mt-10">
       <h3 className="text-xl md:text-2xl font-semibold font-scoreRegular mt-5">

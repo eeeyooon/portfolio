@@ -3,6 +3,7 @@ import ModalPortal from "../../common/ModalPortal";
 import { projectDetailData } from "../../../../data/projects/projectDetailData.ts/projectDetailData";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import findProject from "@/service/findProject";
 
 type Props = {
   projectPath: string;
@@ -22,9 +23,7 @@ export default function ProjectModal({
   selectImage,
   onOpenViewer,
 }: Props) {
-  const project = projectDetailData.find(
-    (project) => project.path === projectPath
-  );
+  const project = findProject(projectPath);
 
   let projectType;
 
@@ -57,19 +56,25 @@ export default function ProjectModal({
       <ModalPortal>
         <ModalWrapper onClick={onClose}>
           <ModalContainer onClick={stopPropagation}>
-            <ProjectShortcut project={project} />
+            <ProjectShortcut projectPath={projectPath} />
             <p className="text-2xl font-semibold md:font-bold md:text-3xl mb-8 md:mb-12 mt-10 md:mt-12">
               {projectType ? "팀 프로젝트" : "개인 프로젝트"}
             </p>
             <MainFeature project={project} />
             {project.contribution && (
-              <ProjectSection project={project} section="contribution" />
+              <ProjectSection
+                projectPath={projectPath}
+                section="contribution"
+              />
             )}
             {project.troubleShooting && (
-              <ProjectSection project={project} section="troubleShooting" />
+              <ProjectSection
+                projectPath={projectPath}
+                section="troubleShooting"
+              />
             )}
             {project.review && (
-              <ProjectSection project={project} section="review" />
+              <ProjectSection projectPath={projectPath} section="review" />
             )}
             <ProjectImage
               onOpenViewer={onOpenViewer}

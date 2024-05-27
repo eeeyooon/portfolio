@@ -1,3 +1,4 @@
+import findProject from "@/service/findProject";
 import { Project } from "@/types/project";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -21,16 +22,20 @@ const sectionConfig = {
 };
 
 type ProjectSectionProps = {
-  project: Project;
+  projectPath: string;
   section: "contribution" | "troubleShooting" | "review";
 };
-
 const DetailContent = dynamic(() => import("./DetailContent"));
 
 export default function ProjectSection({
-  project,
+  projectPath,
   section,
 }: ProjectSectionProps) {
+  const project: Project | undefined = findProject(projectPath);
+
+  if (!project) {
+    return null;
+  }
   const { iconSrc, sectionTitle, alt } = sectionConfig[section];
 
   const sectionData = project[section];
