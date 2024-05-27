@@ -35,7 +35,7 @@ export default function ImageViewer({ imageSrc, onClose }: ImageViewerProps) {
         <ModalWrapper onClick={onClose}>
           <ModalContainer onClick={stopPropagation}>
             <div className="h-full flex justify-center items-center">
-              <div className="relative w-[85vw] h-[75vw] sm:w-[55vw] sm:h-[45vw] md:w-[60vw] md:h-[35vw]">
+              <div className="relative w-[95vw] h-[95vw] sm:w-[85vw] sm:h-[65vw] md:w-[65vw] md:h-[40vw]">
                 <Image
                   className="object-contain w-full h-full overflow-hidden absolute"
                   src={`/images/projects/${filteredImageSrc}.png`}
@@ -65,16 +65,6 @@ export const ModalContainer = tw.section`
   inset-x-0
   inset-y-0
   z-40
-  bg-white
-  drop-shadow-xl
-  border
-  border-stone-100
-  rounded-xl
-  w-11/12
-  sm:w-9/12
-  md:w-4/6
-  h-3/5
-  md:h-5/6
   my-0
   mx-auto
  `;
