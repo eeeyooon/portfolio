@@ -35,11 +35,11 @@ export default function ImageViewer({ imageSrc, onClose }: ImageViewerProps) {
         <ModalWrapper onClick={onClose}>
           <ModalContainer onClick={stopPropagation}>
             <div className="h-full flex justify-center items-center">
-              <div className="relative w-[95vw] h-[95vw] sm:w-[85vw] sm:h-[65vw] md:w-[65vw] md:h-[40vw]">
+              <div className="relative w-[85vw] h-[95vw] sm:w-[85vw] sm:h-[65vw] md:w-[65vw] md:h-[40vw]">
                 <Image
                   className="object-contain w-full h-full overflow-hidden absolute"
                   src={`/images/projects/${filteredImageSrc}.png`}
-                  sizes="(max-width: 768px) 85vw, (max-width: 1200px) 55vw, 60vw"
+                  sizes="(max-width: 768px) 85vw, (max-width: 1200px) 65vw, 85vw"
                   fill={true}
                   alt={`${imageSrc} 이미지`}
                   priority

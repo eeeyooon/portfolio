@@ -7,12 +7,8 @@ export const project10 = {
     `온보딩, 로그인 및 회원가입, 챌린지 신청 및 결제, 알림 기능, 프로필 페이지 및 관리자 페이지 등 화면 및 기능 개발`,
     `로그인 성공 시 백엔드 서버로부터 \`JWT\`를 받아 \`NextJS API Routes\`를 활용하여 \`Next\` 서버에서 세션 관리 `,
     `유저 인터랙션이 많은 페이지에선 \`CSR\`, 빠른 초기 로딩 및 SEO 최적화가 필요한 페이지에선 \`SSR\`을 선택하여 페이지마다 최적화된 렌더링 방식을 사용`,
-<<<<<<< HEAD
     `\`Axios Interceptors\`를 활용한 에러 핸들링 및 \`AccessToken\` 만료 시 새로운 \`AccessToken\`을 받을 수 있도록 기능 구현`,
-=======
     `\`Server-Sent Events\`를 연동하여 실시간 알림 기능 구현`,
-    `\`Axios Interceptors\`를 활용한 에러 핸들링 및 \`AccessToken\` 만료 시 새로운 \`AccessToken\`을 받을 수 있도록 기능 구현 - [**[블로그 포스팅]**](https://velog.io/@eeeyooon/Axios-%EC%9D%B8%ED%84%B0%EC%85%89%ED%84%B0%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%97%90%EB%9F%AC-%ED%95%B8%EB%93%A4%EB%A7%81-%EB%B0%8F-AccessToken-%EB%A7%8C%EB%A3%8C-%EC%8B%9C-%EC%9E%AC%EB%B0%9C%EA%B8%89-%EA%B8%B0%EB%8A%A5-%EA%B5%AC%ED%98%84)`,
->>>>>>> 44e317bc7d055a14de51daac270191f797f56457
     `포트원(구 아임포트)을 연동하여 NHN KCP 실결제 및 결제 후검증 기능 구현`,
     `\`Azure Web App\`과 \`GitHub Actions\`를 사용하여 코드 변경 시 자동으로 빌드, 테스트, 배포가 이루어지는 CI/CD 파이프라인 구축.`,
   ],
