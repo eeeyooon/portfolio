@@ -60,7 +60,7 @@ export default function ProjectModal({
             <p className="text-2xl font-semibold md:font-bold md:text-3xl mb-8 md:mb-12 mt-10 md:mt-12">
               {projectType ? "팀 프로젝트" : "개인 프로젝트"}
             </p>
-            <MainFeature project={project} />
+            <MainFeature projectPath={projectPath} />
             {project.contribution && (
               <ProjectSection
                 projectPath={projectPath}
@@ -79,7 +79,7 @@ export default function ProjectModal({
             <ProjectImage
               onOpenViewer={onOpenViewer}
               selectImage={selectImage}
-              project={project}
+              projectPath={projectPath}
             />
           </ModalContainer>
         </ModalWrapper>

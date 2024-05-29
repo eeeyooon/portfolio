@@ -1,17 +1,22 @@
+import findProject from "@/service/findProject";
 import { Project } from "@/types/project";
 import Image from "next/image";
 
 type ProjectImageProp = {
-  project: Project;
+  projectPath: string;
   selectImage: (imageSrc: string) => void;
   onOpenViewer: () => void;
 };
 
 export default function ProjectImage({
-  project,
+  projectPath,
   selectImage,
   onOpenViewer,
 }: ProjectImageProp) {
+  const project: Project | undefined = findProject(projectPath);
+
+  if (!project) return null;
+
   const { title, path, images } = project;
 
   const openImageViewer = (imageSrc: string) => {

@@ -1,14 +1,19 @@
+import findProject from "@/service/findProject";
 import { Project } from "@/types/project";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
 type MainFeatureProps = {
-  project: Project;
+  projectPath: string;
 };
 
 const MarkdownBox = dynamic(() => import("@/components/markdown/MarkdownBox"));
 
-export default function MainFeature({ project }: MainFeatureProps) {
+export default function MainFeature({ projectPath }: MainFeatureProps) {
+  const project: Project | undefined = findProject(projectPath);
+
+  if (!project) return null;
+
   const { points } = project;
   return (
     <section>
