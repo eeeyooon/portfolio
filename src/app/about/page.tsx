@@ -165,7 +165,7 @@ export default function AboutPage() {
               </p>
               <SlotMachine sentence={sentence} />
               <AboutContent />
-              <p className="text-sm text-stone-500 mt-2">update。 2024.05.17</p>
+              <p className="text-sm text-stone-500 mt-2">update。 2024.05.29</p>
             </motion.div>
           </div>
           <ScrollDown />
