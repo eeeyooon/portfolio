@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const [toggleHeader, setToggleHeader] = useState(false);
   const text = useTypeword("eeeyoon.", 60);
-  const [activeLink, setActiveLink] = useState("");
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -22,16 +20,12 @@ export default function Header() {
   }
 
   const handleLinkClick = (route: string) => {
-    setActiveLink(route);
     setToggleHeader(false);
     const section = document.getElementById(route.slice(1));
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const linkIsActive = (route: string) => activeLink === route;
-
   return (
     <header className="flex flex-col justify-between items-center mx-auto w-full px-8 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-30 pb-[3px] selection:bg-blueLight_color">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
@@ -63,11 +57,7 @@ export default function Header() {
             <li key={route}>
               <a
                 href={`#${route}`}
-                className={
-                  linkIsActive(`#${route}`)
-                    ? "text-blue_color"
-                    : "hover:text-blue_color"
-                }
+                className="hover:text-blue_color"
                 onClick={() => handleLinkClick(`#${route}`)}
               >
                 {route.charAt(0).toUpperCase() + route.slice(1)}
