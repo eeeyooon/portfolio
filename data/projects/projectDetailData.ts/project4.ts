@@ -21,5 +21,5 @@ export const project4 = {
   githubUrl: "https://github.com/Cafe-Manage-Service-CAFE-IN/cafe-in",
   docsUrl: "https://github.com/Cafe-Manage-Service-CAFE-IN/cafe-in/wiki",
   serviceUrl: "https://cafe-in.web.app/",
-  images: 1,
+  images: 2,
 };

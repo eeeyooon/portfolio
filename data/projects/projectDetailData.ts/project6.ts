@@ -21,5 +21,5 @@ export const project6 = {
   githubUrl: "https://github.com/sm022/marketkarly",
   docsUrl: "https://github.com/sm022/marketkarly/wiki",
   serviceUrl: "",
-  images: 1,
+  images: 2,
 };
