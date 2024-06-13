@@ -18,5 +18,5 @@ export const project5 = {
   githubUrl: "https://github.com/LikeLion-FE-Final-Project03/car-zip",
   docsUrl: "https://github.com/LikeLion-FE-Final-Project03/car-zip/wiki",
   serviceUrl: "",
-  images: 1,
+  images: 2,
 };
