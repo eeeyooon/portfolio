@@ -5,7 +5,7 @@ type Props = {
 };
 function SkillCard({ skill: { stack, skillList } }: Props) {
   return (
-    <article className="border-brown_color border-[3px] lg:h-80 md:h-80 w-80 sm:w-auto md:w-60 lg:w-auto h-80 mx-auto">
+    <article className="border-brown_color border-[3px] lg:h-80 md:h-80 w-[80vw] sm:w-auto md:w-60 lg:w-auto h-[21rem] mx-auto">
       <h3 className="text-redbrown_color font-scoreLight text-lg lg:text-xl md:text-base text-center p-4 font-semibold my-2">
         {stack}
       </h3>
