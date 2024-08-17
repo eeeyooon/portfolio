@@ -10,7 +10,7 @@ export const project9 = {
   ],
   startDate: "2023-11-09",
   endDate: "진행중",
-  category: ["Personal", "Featured"],
+  category: ["Personal"],
   path: "portfolio-site",
   featured: true,
   stacks: ["nextjs", "typescript", "tailwindcss", "vercel"],
