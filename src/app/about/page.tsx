@@ -109,14 +109,14 @@ export default function AboutPage() {
         >
           <div
             id="about"
-            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-16 selection:bg-brown_color"
+            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-20 selection:bg-brown_color"
           >
             <motion.div
               className="flex flex-col w-full justify-center items-center basis-5/12"
               variants={itemVariants}
             >
               <motion.p
-                className="hidden my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-3 left-2 sm:flex sm:top-10 sm:left-18 md:top-5 md:left-10 md:flex flex-col gap-1 md:gap-2 text-stone-800"
+                className="hidden my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-3 left-2 sm:flex sm:top-10 sm:left-18 md:top-5 md:left-10 md:flex flex-col gap-1 md:gap-2 text-stone-800 pt-6"
                 variants={messageItemVariants}
               >
                 <span>I find joy in</span>
