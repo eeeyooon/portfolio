@@ -116,28 +116,24 @@ export default function AboutPage() {
               variants={itemVariants}
             >
               <motion.p
-                className="my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-8 left-7 sm:top-10 sm:left-18 md:top-5 md:left-10 flex flex-col gap-1 md:gap-2 text-stone-800"
+                className="hidden my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-3 left-2 sm:flex sm:top-10 sm:left-18 md:top-5 md:left-10 md:flex flex-col gap-1 md:gap-2 text-stone-800"
                 variants={messageItemVariants}
               >
                 <span>I find joy in</span>
                 <span> what I do.</span>
               </motion.p>
-              <div
-                className="w-60 h-72 sm:h-80 md:w-[22rem] md:h-auto overflow-hidden block rounded-xl"
-                onContextMenu={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <Image
-                  src={ProfileImage}
-                  alt="Picture of the author"
-                  width={300}
-                  height={400}
-                  priority
-                  className="rounded-lg object-cover w-full h-full"
-                />
-              </div>
-              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 text-stone-600 w-full justify-center selection:bg-stone-300">
+              
+            </motion.div>
+            <motion.div
+              className="flex flex-col w-full"
+              variants={itemVariants}
+            >
+              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-8">
+                About Me
+              </p>
+              <SlotMachine sentence={sentence} />
+              <AboutContent />
+              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 text-stone-600 w-full  selection:bg-stone-300">
                 <Link
                   href="https://github.com/eeeyooon"
                   target="_blank"
@@ -155,17 +151,7 @@ export default function AboutPage() {
                   Contact
                 </Link>
               </div>
-            </motion.div>
-            <motion.div
-              className="flex flex-col w-full md:w-2/3"
-              variants={itemVariants}
-            >
-              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-8">
-                About Me
-              </p>
-              <SlotMachine sentence={sentence} />
-              <AboutContent />
-              <p className="text-sm text-stone-500 mt-2">update。 2024.06.13</p>
+              <p className="text-sm text-stone-500 mt-2">update。 2024.09.24</p>
             </motion.div>
           </div>
           <ScrollDown />
