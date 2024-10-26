@@ -140,7 +140,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
             <motion.div className="flex flex-col w-full md:w-2/3" variants={itemVariants}>
-              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-8">About Me</p>
+              <p className="font-SMUSnow  text-gray-600 text-lg md:text-xl mb-8">About Me</p>
               <SlotMachine sentence={sentence} />
               <AboutContent />
               <p className="text-sm text-stone-500 mt-2">update。 2024.10.26</p>

@@ -9,8 +9,7 @@
   font-family: "Pretendard-Regular";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"),
-    url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  src: local("Pretendard Regular"), url("/fonts/Pretendard-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -50,6 +49,20 @@
   font-display: swap;
   src: local("Hambak"), url("/fonts/Hambak.ttf") format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Katuri";
+  src: url("https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SMUSnowflake-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/SMUSnowflake-Bold.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
