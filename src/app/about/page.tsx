@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, Variants, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import ProfileImage from "../../../public/images/profile.jpg";
+import ProfileImage from "../../../public/images/eeeyooon-profile.jpeg";
 import { sentence } from "../../../data/about/aboutData";
 import useTypeword from "@/hooks/useTypeword";
 import dynamic from "next/dynamic";
@@ -85,9 +85,7 @@ export default function AboutPage() {
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-xl text-center md:text-4xl font-ghanachocolate text-stone-800">
-              {onBoardText}
-            </p>
+            <p className="text-xl text-center md:text-4xl font-ghanachocolate text-stone-800">{onBoardText}</p>
             <motion.span
               className="text-lg text-center sm:text-base md:text-xl font-scoreRegular mt-6 text-stone-800"
               initial={{ opacity: 0 }}
@@ -101,57 +99,51 @@ export default function AboutPage() {
         )}
       </AnimatePresence>
       {!showInitialMessage && (
-        <motion.section
-          className="h-full"
-          variants={sectionVariants}
-          initial="hidden"
-          animate={controls}
-        >
+        <motion.section className="h-full" variants={sectionVariants} initial="hidden" animate={controls}>
           <div
             id="about"
-            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-20 selection:bg-brown_color"
+            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-16 selection:bg-brown_color"
           >
-            <motion.div
-              className="flex flex-col w-full justify-center items-center basis-5/12"
-              variants={itemVariants}
-            >
+            <motion.div className="flex flex-col w-full justify-center items-center basis-5/12" variants={itemVariants}>
               <motion.p
-                className="hidden my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-3 left-2 sm:flex sm:top-10 sm:left-18 md:top-5 md:left-10 md:flex flex-col gap-1 md:gap-2 text-stone-800 pt-6"
+                className="my-1 text-3xl text-center md:text-5xl font-ghanachocolate absolute top-8 left-7 sm:top-10 sm:left-18 md:top-5 md:left-10 flex flex-col gap-1 md:gap-2 text-stone-800"
                 variants={messageItemVariants}
               >
                 <span>I find joy in</span>
                 <span> what I do.</span>
               </motion.p>
-              
-            </motion.div>
-            <motion.div
-              className="flex flex-col w-full"
-              variants={itemVariants}
-            >
-              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-8">
-                About Me
-              </p>
-              <SlotMachine sentence={sentence} />
-              <AboutContent />
-              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 text-stone-600 w-full  selection:bg-stone-300">
-                <Link
-                  href="https://github.com/eeeyooon"
-                  target="_blank"
-                  className="hover:font-semibold"
-                >
+              <div
+                className="w-60 h-72 sm:h-80 md:w-[22rem] md:h-auto overflow-hidden block rounded-xl"
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                <Image
+                  src={ProfileImage}
+                  alt="Picture of the author"
+                  width={300}
+                  height={400}
+                  priority
+                  className="rounded-lg object-cover w-full h-full"
+                />
+              </div>
+              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 text-stone-600 w-full justify-center selection:bg-stone-300">
+                <Link href="https://github.com/eeeyooon" target="_blank" className="hover:font-semibold">
                   GitHub
                 </Link>
-                <a
-                  href="mailto: vywns4569@gmail.com"
-                  className="hover:font-semibold"
-                >
+                <a href="mailto: vywns4569@gmail.com" className="hover:font-semibold">
                   Email
                 </a>
                 <Link href="#contact" className="hover:font-semibold">
                   Contact
                 </Link>
               </div>
-              <p className="text-sm text-stone-500 mt-2">update。 2024.09.24</p>
+            </motion.div>
+            <motion.div className="flex flex-col w-full md:w-2/3" variants={itemVariants}>
+              <p className="font-dohyeon text-stone-600 text-lg md:text-2xl mb-8">About Me</p>
+              <SlotMachine sentence={sentence} />
+              <AboutContent />
+              <p className="text-sm text-stone-500 mt-2">update。 2024.10.26</p>
             </motion.div>
           </div>
           <ScrollDown />
