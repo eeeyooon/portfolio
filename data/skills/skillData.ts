@@ -34,3 +34,22 @@ export const skills: Skills[] = [
     ],
   },
 ];
+
+export const skillData = [
+  {
+    category: "Frontend Development",
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    category: "Development Tools",
+    skills: ["Tanstack-Query", "TailwindCSS", "Styled-Components", "Emotion", "React-Hook-Form"],
+  },
+  {
+    category: "CI/CD & Hosting",
+    skills: ["GitHub Actions", "Vercel"],
+  },
+  {
+    category: "Collaboration Tools",
+    skills: ["Git", "Figma", "Slack", "Notion", "Jira"],
+  },
+];

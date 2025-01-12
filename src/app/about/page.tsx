@@ -98,11 +98,12 @@ export default function AboutPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
       {!showInitialMessage && (
         <motion.section className="h-full" variants={sectionVariants} initial="hidden" animate={controls}>
           <div
             id="about"
-            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-16 selection:bg-brown_color"
+            className="relative flex items-center gap-6 flex-col sm:flex-row md:flex-row pt-16 selection:bg-gray-300"
           >
             <motion.div className="flex flex-col w-full justify-center items-center basis-5/12" variants={itemVariants}>
               <motion.p
@@ -127,7 +128,7 @@ export default function AboutPage() {
                   className="rounded-lg object-cover w-full h-full"
                 />
               </div>
-              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 text-stone-600 w-full justify-center selection:bg-stone-300">
+              <div className="flex flex-row gap-5 text-xs md:text-base mt-4 text-gray-600 w-full justify-center selection:bg-gray-300">
                 <Link href="https://github.com/eeeyooon" target="_blank" className="hover:font-semibold">
                   GitHub
                 </Link>
@@ -140,10 +141,10 @@ export default function AboutPage() {
               </div>
             </motion.div>
             <motion.div className="flex flex-col w-full md:w-2/3" variants={itemVariants}>
-              <p className="font-SMUSnow  text-gray-600 text-lg md:text-xl mb-8">About Me</p>
+              <p className="font-spoqa text-black font-light text-lg md:text-2xl mb-8">About Me</p>
               <SlotMachine sentence={sentence} />
               <AboutContent />
-              <p className="text-sm text-stone-500 mt-2">update。 2024.10.26</p>
+              <p className="text-sm text-gray-500 mt-2">update。 2025.01.12</p>
             </motion.div>
           </div>
           <ScrollDown />

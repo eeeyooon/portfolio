@@ -30,7 +30,7 @@ export default function Header() {
     <header className="flex flex-col justify-between items-center mx-auto w-full px-8 top-0 sm:h-[12vh] md:h-[12vh] lg:h-[10vh] backdrop-blur-sm md:flex-row sticky z-30 pb-[3px] selection:bg-blueLight_color">
       <div className="w-full justify-between flex md:flex-col md:justify-between">
         <Link href="/">
-          <span className="text-2xl font-light font-shrik text-blue_color pl-2">{text}</span>
+          <span className="text-lg font-medium font-spoqa text-black pl-2">{text}</span>
         </Link>
         <button
           className="cursor-pointer md:hidden w-8 h-8 relative flex flex-col justify-center items-center"
@@ -61,7 +61,7 @@ export default function Header() {
         } font-SMUSnow text-gray-600 `}
       >
         <ul
-          className={`flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg bg-none ${
+          className={`flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg bg-white_gray ${
             toggleHeader ? "bg-white opacity-90" : ""
           } md:bg-transparent`}
         >
