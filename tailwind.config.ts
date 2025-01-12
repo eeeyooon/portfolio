@@ -23,6 +23,7 @@ const config: Config = {
         hambak: ["Hambak", "sans-serif"],
         Katuri: ["Katuri", "sans-serif"],
         SMUSnow: ["SMUSnowflake-Bold", "sans-serif"],
+        spoqa: ["var(--font-spoqa-han-sans-neo)"],
       },
       colors: {
         primary: "#ffffff",
@@ -32,6 +33,10 @@ const config: Config = {
         yellow_color: "#FFC267",
         brown_color: "#DEAF8E",
         redbrown_color: "#A52A2A",
+        white_gray: "#f5f5f5",
+        light_gray: "#dddddd",
+        medium_gray: "#c5c5c5",
+        black: "#111111",
       },
       screens: {
         sm: "640px",
