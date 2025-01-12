@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={spoqaHanSansNeo.variable}>
-      <body className="bg-white_gray font-pretendard flex flex-col max-w-screen-2xl mx-auto overflow-x-hidden scrollbar-hide w-full selection:bg-gray-300">
+      <body className="bg-white_gray font-spoqa flex flex-col max-w-screen-2xl mx-auto overflow-x-hidden scrollbar-hide w-full selection:bg-gray-300">
         <Header />
         <main className="relative grow w-11/12 mx-auto md:w4/5">
           {children}

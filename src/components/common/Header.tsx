@@ -61,13 +61,13 @@ export default function Header() {
         } font-SMUSnow text-gray-600 `}
       >
         <ul
-          className={`flex flex-col gap-4 py-5 text-base text-center md:flex-row md:gap-7 md:text-lg bg-white_gray ${
-            toggleHeader ? "bg-white opacity-90" : ""
+          className={`flex flex-col gap-4 py-5 font-spoqa font-medium text-lg text-center md:flex-row md:gap-7 md:text-xl text-black bg-white_gray ${
+            toggleHeader ? "bg-white_gray opacity-90" : ""
           } md:bg-transparent`}
         >
           {["about", "skills", "projects", "contact"].map((route) => (
             <li key={route}>
-              <a href={`#${route}`} className="hover:text-blue_color" onClick={() => handleLinkClick(`#${route}`)}>
+              <a href={`#${route}`} className=" hover:text-gray-600" onClick={() => handleLinkClick(`#${route}`)}>
                 {route.charAt(0).toUpperCase() + route.slice(1)}
               </a>
             </li>
