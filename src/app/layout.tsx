@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "프론트엔드 개발자 강지윤의 포트폴리오입니다.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <body className="bg-primary font-pretendard flex flex-col max-w-screen-2xl mx-auto overflow-x-hidden scrollbar-hide w-full selection:bg-blueLight_color">

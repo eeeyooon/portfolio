@@ -7,11 +7,11 @@ import FloatingArrowBtn from "@/components/common/FloatingArrowBtn";
 export default function Home() {
   return (
     <section id="home static">
-      <FloatingArrowBtn />
       <AboutPage />
       <SkillsPage />
       <ProjectsPage />
       <ContactPage />
+      <FloatingArrowBtn />
     </section>
   );
 }
